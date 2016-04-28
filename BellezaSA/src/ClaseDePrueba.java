@@ -9,5 +9,7 @@ import javax.swing.*;
  * @author Usuario
  */
 public class ClaseDePrueba {
-    JoptionPane.showMessageDialog(null,"hola");
+    public static void main (String[]args){
+    JOptionPane.showMessageDialog(null,"hola");
+    }
 }
