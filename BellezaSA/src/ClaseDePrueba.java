@@ -9,5 +9,5 @@
  * @author Usuario
  */
 public class ClaseDePrueba {
-    
+    JoptionPane.showMessageDialog(null,"hola");
 }
