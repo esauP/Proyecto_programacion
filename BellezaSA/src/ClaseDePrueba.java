@@ -11,5 +11,6 @@ import javax.swing.*;
 public class ClaseDePrueba {
     public static void main (String[]args){
     JOptionPane.showMessageDialog(null,"hola");
+        System.out.println("Adios");
     }
 }
