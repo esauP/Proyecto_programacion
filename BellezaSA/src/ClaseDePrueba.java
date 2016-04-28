@@ -12,5 +12,6 @@ public class ClaseDePrueba {
     public static void main (String[]args){
     JOptionPane.showMessageDialog(null,"hola");
         System.out.println("Adios");
+        System.out.println("Prueba");
     }
 }
