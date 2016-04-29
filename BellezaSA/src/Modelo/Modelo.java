@@ -5,12 +5,15 @@
  */
 package Modelo;
 
+import java.io.IOException;
+import java.sql.SQLException;
+
 /**
  *
  * @author Usuario
  */
 public class Modelo extends ConexionBD {
-    public Modelo(){
+    public Modelo()throws IOException, SQLException{
         
     }
 }
