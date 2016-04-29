@@ -3,12 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Modelo;
+package Controlador;
+
+import Modelo.Modelo;
+import Vista.Interfaz;
 
 /**
  *
  * @author Usuario
  */
-public class Modelo_prueba1 {
+public class Controlador {
+    Interfaz vista = new Interfaz();
+    Modelo modelo = new Modelo();
+    
+    
     
 }

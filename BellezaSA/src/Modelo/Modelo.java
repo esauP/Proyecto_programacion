@@ -3,12 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Controlador;
+package Modelo;
 
 /**
  *
  * @author Usuario
  */
-public class Controlador_prueba1 {
-    
+public class Modelo extends ConexionBD {
+    public Modelo(){
+        
+    }
 }
