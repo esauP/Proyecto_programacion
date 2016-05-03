@@ -3,18 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Modelo;
+package Controlador;
 
-import java.io.IOException;
+import Modelo.ConexionAcces;
 import java.sql.SQLException;
 
 /**
  *
  * @author Usuario
  */
-public class Modelo extends ConexionBD {
-
-    public Modelo() throws IOException, SQLException {
-
+public class Main {
+    public static void main (String [] args) throws SQLException{
+        ConexionAcces bd = new ConexionAcces();
+        
+        bd.EstablecerConexion();
     }
 }

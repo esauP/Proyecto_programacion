@@ -17,102 +17,65 @@ import javax.swing.JOptionPane;
  * @author Usuario
  */
 public class ConexionAcces {
-    
+
     private Connection conexion;
- 
+
     private Statement sentencia;
- 
-    
- 
+
     private final String controlador;
- 
+
     private final String nombre_bd;
- 
+
     private final String usuarioBD;
- 
+
     private final String passwordBD;
- 
-    
- 
-    
- 
-    public ConexionAcces(){
- 
-        this.controlador="sun.jdbc.odbc.JdbcOdbcDriver";
- 
-        this.nombre_bd="BellezaSA1.accdb";
- 
-        this.usuarioBD="";
- 
-        this.passwordBD="";
- 
-        
- 
+
+    public ConexionAcces() {
+
+        this.controlador = "sun.jdbc.odbc.JdbcOdbcDriver";
+
+        this.nombre_bd = "BellezaSA1.accdb";
+
+        this.usuarioBD = "";
+
+        this.passwordBD = "";
+
     }
- 
-    
- 
-    public boolean EstablecerConexion() throws SQLException{
- 
-        
- 
-       
- 
-        try{
- 
-            conexion=DriverManager.getConnection("jdbc:ucanaccess://"+this.nombre_bd,this.usuarioBD,this.passwordBD);
-            JOptionPane.showMessageDialog(null, "Conexion realizada con exito");
-        }catch (SQLException e){
- 
-             JOptionPane.showMessageDialog(null,"Error al realizar la conexion "+e);
- 
-             return false;
- 
-        }
- 
-        
- 
+
+    public boolean EstablecerConexion() throws SQLException {
+
         try {
- 
-            this.sentencia=this.conexion.createStatement(
- 
-            ResultSet.TYPE_SCROLL_INSENSITIVE,
- 
-                    ResultSet.CONCUR_READ_ONLY);
- 
-        }
- 
-        catch (SQLException e) {
- 
-            JOptionPane.showMessageDialog(null,"Error al crear el objeto sentencia "+e);
- 
+
+            conexion = DriverManager.getConnection("jdbc:ucanaccess://" + this.nombre_bd, this.usuarioBD, this.passwordBD);
+            JOptionPane.showMessageDialog(null, "Conexion realizada con exito");
+        } catch (SQLException e) {
+
+            JOptionPane.showMessageDialog(null, "Error al realizar la conexion " + e);
+
             return false;
- 
+
         }
- 
-        
- 
+
+        try {
+
+            this.sentencia = this.conexion.createStatement(
+                    ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+        } catch (SQLException e) {
+
+            JOptionPane.showMessageDialog(null, "Error al crear el objeto sentencia " + e);
+            return false;
+        }
         return true;
- 
-        
- 
+
     }
- 
+
+  
     
- 
-    public ResultSet EjecutarSentencia( String sql) throws SQLException{
- 
-        
- 
+    public ResultSet EjecutarSentencia(String sql) throws SQLException {
         ResultSet rs;
- 
+
         rs = this.sentencia.executeQuery(sql);
- 
-        
- 
-        
- 
         return rs;
- 
+
     }
 }
