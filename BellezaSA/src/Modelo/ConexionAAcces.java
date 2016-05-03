@@ -40,7 +40,7 @@ public class ConexionAAcces {
  
         this.controlador="sun.jdbc.odbc.JdbcOdbcDriver";
  
-        this.nombre_bd="Base de datos11.accdb";
+        this.nombre_bd="BellezaSA1.accdb";
  
         this.usuarioBD="";
  
