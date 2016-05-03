@@ -16,7 +16,7 @@ import javax.swing.JOptionPane;
  *
  * @author Usuario
  */
-public class ConexionAAcces {
+public class ConexionAcces {
     
     private Connection conexion;
  
@@ -36,7 +36,7 @@ public class ConexionAAcces {
  
     
  
-    public ConexionAAcces(){
+    public ConexionAcces(){
  
         this.controlador="sun.jdbc.odbc.JdbcOdbcDriver";
  
