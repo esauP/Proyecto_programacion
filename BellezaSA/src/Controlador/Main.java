@@ -5,7 +5,8 @@
  */
 package Controlador;
 
-import Modelo.ConexionAcces;
+import Vista.Interfaz;
+import java.io.IOException;
 import java.sql.SQLException;
 
 /**
@@ -13,9 +14,7 @@ import java.sql.SQLException;
  * @author Usuario
  */
 public class Main {
-    public static void main (String [] args) throws SQLException{
-        ConexionAcces bd = new ConexionAcces();
-        
-        bd.EstablecerConexion();
+    public static void main (String [] args) throws SQLException, IOException{
+      new Controlador( new Interfaz() ).Iniciar() ;
     }
 }

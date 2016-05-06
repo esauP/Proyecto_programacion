@@ -20,11 +20,11 @@ import java.util.StringTokenizer;
 public class ConexionBD {
 
     private static Connection conexion;
-    private static String user = "";
-    private static String bd = user + "_BellezaSA";
-    private static String password = "";
-    private static String host = "";
-    private static String server = "jdbc:mysql://" + host + "/" + bd;
+    private String user = "";
+    private String bd = user + "_BellezaSA";
+    private String password = "";
+    private String host = "";
+    private String server = "jdbc:mysql://" + host + "/" + bd;
 
     public ConexionBD() throws IOException, SQLException {
 
@@ -36,33 +36,25 @@ public class ConexionBD {
         /**
          * Asignamos los valores para los datos de conexion
          */
-        server = "jdbc:mysql://" + host + "/" + bd;
+        this.server = "jdbc:mysql://" + this.host + "/" + this.bd;
 
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            conexion = (Connection) DriverManager.getConnection(server, user, password);
-            System.out.println("Conexion a base de datos " + server + " ...OK");
+            conexion = (Connection) DriverManager.getConnection(this.server, this.user, this.password);
+            System.out.println("Conexion a base de datos " + this.server + " ...OK");
         } catch (ClassNotFoundException ex) {
             System.out.println("Error cargando el Driver Mysql JDBC ...Fail");
         }
     }
 
-    public java.sql.Connection getConexion() {
+    public Connection getConexion() {
         return this.conexion;
     }
 
     /**
      * Nos sirve para comprobar que los datos estan correctamente introducidos
      */
-
-//        System.out.println(host);
-//        System.out.println("");
-//        System.out.println(user);
-//        System.out.println("");
-//        System.out.println(password);
-//        System.out.println("");
-//        System.out.println(server);
-    public static void leer() throws IOException {
+    public void leer() throws IOException {
         BufferedReader h = new BufferedReader(new FileReader("setup.txt"));
         String z = null;
         while ((z = h.readLine()) != null) {
@@ -70,11 +62,17 @@ public class ConexionBD {
             StringTokenizer g = new StringTokenizer(z, ",");
             for (int i = 0; i < g.countTokens(); i++) {
 
-                host = g.nextToken();
-                user = g.nextToken();
-                password = g.nextToken();
-
+                this.host = g.nextToken();
+                this.user = g.nextToken();
+                this.password = g.nextToken();
             }
+            System.out.println(host);
+            System.out.println("");
+            System.out.println(user);
+            System.out.println("");
+            System.out.println(password);
+            System.out.println("");
+            System.out.println(server);
         }
     }
 }

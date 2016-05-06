@@ -5,16 +5,18 @@
  */
 package Controlador;
 
-
 import Modelo.Modelo;
 import Vista.Interfaz;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.io.IOException;
 import java.sql.SQLException;
-
+import javax.swing.SwingUtilities;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
 
 /**
  *
@@ -24,42 +26,85 @@ public class Controlador implements ActionListener, MouseListener {
 
     Interfaz vista;
     Modelo mo = new Modelo();
-    
- 
-    
+
     public Controlador(Interfaz vista) throws IOException, SQLException {
-      
+
         this.vista = vista;
+    }
+
+    public enum AccionMVC {
+
+        AbrirDia,
+        DiaconfBtnGua,
+        DiaconfBtnCan
+    }
+
+    public void Iniciar() {
+        try {
+            UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
+            SwingUtilities.updateComponentTreeUI(vista);
+            vista.setVisible(true);
+        } catch (UnsupportedLookAndFeelException ex) {
+        } catch (ClassNotFoundException ex) {
+        } catch (InstantiationException ex) {
+        } catch (IllegalAccessException ex) {
+        }
+        //Colocamos la ventana en el centro de la pantalla
+        this.vista.setLocationRelativeTo(null);
+        //Añadimos el actioncommand al menu item para controlar su action performed
+        this.vista.Menuconf.setActionCommand("AbrirDia");
+        this.vista.Menuconf.addActionListener(this);
+        //Añadimos el actioncommand al boton guardar para controlar su action performed
+        this.vista.BtnDiaConGuar.setActionCommand("DiaconfBtnGua");
+        this.vista.BtnDiaConGuar.addActionListener(this);
+        //Añadimos el actioncommand al boton cancelar item para controlar su action performed
+        this.vista.BtnDiaConCan.setActionCommand("DiaconfBtnCan");
+        this.vista.BtnDiaConCan.addActionListener(this);
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        switch (AccionMVC.valueOf(e.getActionCommand())) {
+            case AbrirDia:
+                 int x = (int) (Toolkit.getDefaultToolkit().getScreenSize().getWidth() / 2 - this.vista.DiaConfBd.getWidth() / 2);
+                int y = (int) (Toolkit.getDefaultToolkit().getScreenSize().getHeight() / 2 - this.vista.DiaConfBd.getHeight() / 2);
+                this.vista.DiaConfBd.setLocation(x, y);
+                this.vista.DiaConfBd.setSize(340, 200);
+                this.vista.DiaConfBd.setVisible(true);
+                break;
+            case DiaconfBtnGua:
+                this.mo.EscribeBdconf(this.vista.TxtDiaIP.getText(), this.vista.TxtDiaUsu.getText(), this.vista.TxtDiaPass.getText());
+                this.vista.DiaConfBd.dispose();
+                break;
+            case DiaconfBtnCan:
+                this.vista.DiaConfBd.dispose();
+                break;
+        }
     }
 
     @Override
     public void mouseClicked(MouseEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       
     }
 
     @Override
     public void mousePressed(MouseEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
     }
 
     @Override
     public void mouseReleased(MouseEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       
     }
 
     @Override
     public void mouseEntered(MouseEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       
     }
 
     @Override
     public void mouseExited(MouseEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
     }
 
 }
