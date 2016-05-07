@@ -12,6 +12,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
@@ -25,7 +26,7 @@ public class Controlador implements ActionListener, MouseListener {
     Interfaz vista;
     Modelo mo = new Modelo();
 
-    public Controlador(Interfaz vista){
+    public Controlador(Interfaz vista) {
 
         this.vista = vista;
     }
@@ -71,8 +72,18 @@ public class Controlador implements ActionListener, MouseListener {
                 this.vista.DiaConfBd.setVisible(true);
                 break;
             case DiaconfBtnGua:
-                this.mo.EscribeBdconf(this.vista.TxtDiaIP.getText(), this.vista.TxtDiaUsu.getText(), this.vista.TxtDiaPass.getText());
-                this.vista.DiaConfBd.dispose();
+                String ip,
+                 usu,
+                 pass;
+                ip = this.vista.TxtDiaIP.getText();
+                usu = this.vista.TxtDiaUsu.getText();
+                pass = this.vista.TxtDiaPass.getText();
+                if (!ip.isEmpty() || !usu.isEmpty() || !pass.isEmpty()) {
+                    this.mo.EscribeBdconf(ip, usu, pass);
+                    this.vista.DiaConfBd.dispose();
+                }else{
+                    JOptionPane.showMessageDialog(vista, "Debe introducir Datos para poder guardarlos en el fichero de configuracion");
+                }
                 break;
             case DiaconfBtnCan:
                 this.vista.DiaConfBd.dispose();
@@ -82,27 +93,27 @@ public class Controlador implements ActionListener, MouseListener {
 
     @Override
     public void mouseClicked(MouseEvent e) {
-       
+
     }
 
     @Override
     public void mousePressed(MouseEvent e) {
-        
+
     }
 
     @Override
     public void mouseReleased(MouseEvent e) {
-       
+
     }
 
     @Override
     public void mouseEntered(MouseEvent e) {
-       
+
     }
 
     @Override
     public void mouseExited(MouseEvent e) {
-        
+
     }
 
 }
