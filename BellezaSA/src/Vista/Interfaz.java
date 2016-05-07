@@ -41,7 +41,20 @@ public class Interfaz extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
+        jPanel4 = new javax.swing.JPanel();
+        jPanel5 = new javax.swing.JPanel();
         Menu = new javax.swing.JMenuBar();
+        menuListados = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenuItem3 = new javax.swing.JMenuItem();
+        jMenuItem4 = new javax.swing.JMenuItem();
+        menuArchivo = new javax.swing.JMenu();
+        menuPrecio = new javax.swing.JMenuItem();
+        menuFacturas = new javax.swing.JMenuItem();
+        menuEmpleado = new javax.swing.JMenuItem();
+        menuClientes = new javax.swing.JMenuItem();
         Menuconf = new javax.swing.JMenu();
         menuConexion = new javax.swing.JMenuItem();
 
@@ -110,7 +123,7 @@ public class Interfaz extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 1087, Short.MAX_VALUE)
+                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 1048, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -121,20 +134,91 @@ public class Interfaz extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jTabbedPane1.addTab("tab1", jPanel1);
+        jTabbedPane1.addTab("TPV", jPanel1);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1107, Short.MAX_VALUE)
+            .addGap(0, 1068, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 541, Short.MAX_VALUE)
         );
 
-        jTabbedPane1.addTab("tab2", jPanel2);
+        jTabbedPane1.addTab("Clientes", jPanel2);
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1068, Short.MAX_VALUE)
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 541, Short.MAX_VALUE)
+        );
+
+        jTabbedPane1.addTab("Productos", jPanel3);
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1068, Short.MAX_VALUE)
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 541, Short.MAX_VALUE)
+        );
+
+        jTabbedPane1.addTab("Empleados", jPanel4);
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1068, Short.MAX_VALUE)
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 541, Short.MAX_VALUE)
+        );
+
+        jTabbedPane1.addTab("Proveedores", jPanel5);
+
+        menuListados.setText("Archivo");
+
+        jMenuItem1.setText("Datos de la empresa");
+        menuListados.add(jMenuItem1);
+
+        jMenuItem2.setText("Incremento de precio");
+        menuListados.add(jMenuItem2);
+
+        jMenuItem3.setText("Administracion Usuarios");
+        menuListados.add(jMenuItem3);
+
+        jMenuItem4.setText("Salir");
+        menuListados.add(jMenuItem4);
+
+        Menu.add(menuListados);
+
+        menuArchivo.setText("Listados");
+
+        menuPrecio.setText("Lista de Precios");
+        menuArchivo.add(menuPrecio);
+
+        menuFacturas.setText("Listado de facturas");
+        menuArchivo.add(menuFacturas);
+
+        menuEmpleado.setText("Facturacion por empleado");
+        menuArchivo.add(menuEmpleado);
+
+        menuClientes.setText("Facturacion por clientes");
+        menuArchivo.add(menuClientes);
+
+        Menu.add(menuArchivo);
 
         Menuconf.setText("Configuración");
 
@@ -161,6 +245,8 @@ public class Interfaz extends javax.swing.JFrame {
                 .addComponent(jTabbedPane1)
                 .addContainerGap())
         );
+
+        jTabbedPane1.getAccessibleContext().setAccessibleName("TPV");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -214,9 +300,22 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JMenu menuArchivo;
+    public javax.swing.JMenuItem menuClientes;
     public javax.swing.JMenuItem menuConexion;
+    public javax.swing.JMenuItem menuEmpleado;
+    public javax.swing.JMenuItem menuFacturas;
+    private javax.swing.JMenu menuListados;
+    public javax.swing.JMenuItem menuPrecio;
     // End of variables declaration//GEN-END:variables
 }
