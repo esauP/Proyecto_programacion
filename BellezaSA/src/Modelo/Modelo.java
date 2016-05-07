@@ -15,7 +15,7 @@ import java.sql.SQLException;
  */
 public class Modelo extends ConexionBD {
 
-    public Modelo() throws IOException, SQLException {
+    public Modelo() {
 
     }
 

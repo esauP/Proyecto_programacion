@@ -7,11 +7,14 @@ package Modelo;
 
 import com.mysql.jdbc.Connection;
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.StringTokenizer;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -26,24 +29,28 @@ public class ConexionBD {
     private String host = "";
     private String server = "jdbc:mysql://" + host + "/" + bd;
 
-    public ConexionBD() throws IOException, SQLException {
-
-        /**
-         * Leemos el archivo configuracion de los datos de acceso de la base de
-         * datos
-         */
-        leer();
-        /**
-         * Asignamos los valores para los datos de conexion
-         */
-        this.server = "jdbc:mysql://" + this.host + "/" + this.bd;
-
+    public ConexionBD() {
+            /**
+             * Leemos el archivo configuracion de los datos de acceso de la base de
+             * datos
+             */
         try {
-            Class.forName("com.mysql.jdbc.Driver");
-            conexion = (Connection) DriverManager.getConnection(this.server, this.user, this.password);
-            System.out.println("Conexion a base de datos " + this.server + " ...OK");
-        } catch (ClassNotFoundException ex) {
-            System.out.println("Error cargando el Driver Mysql JDBC ...Fail");
+            leer();
+            /**
+             * Asignamos los valores para los datos de conexion
+             */
+            this.server = "jdbc:mysql://" + this.host + "/" + this.bd;
+            try {
+                Class.forName("com.mysql.jdbc.Driver");
+                conexion = (Connection) DriverManager.getConnection(this.server, this.user, this.password);
+                System.out.println("Conexion a base de datos " + this.server + " ...OK");
+            } catch (SQLException e) {
+                System.err.println(e.getMessage());
+            } catch (ClassNotFoundException e) {
+                System.err.println(e.getMessage());
+            }
+        } catch (IOException ex) {
+            System.err.println(ex.getMessage());
         }
     }
 
@@ -54,7 +61,7 @@ public class ConexionBD {
     /**
      * Nos sirve para comprobar que los datos estan correctamente introducidos
      */
-    public void leer() throws IOException {
+    public void leer() throws FileNotFoundException, IOException {
         BufferedReader h = new BufferedReader(new FileReader("setup.txt"));
         String z = null;
         while ((z = h.readLine()) != null) {
