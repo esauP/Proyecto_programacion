@@ -51,8 +51,8 @@ public class Controlador implements ActionListener, MouseListener {
         //Colocamos la ventana en el centro de la pantalla
         this.vista.setLocationRelativeTo(null);
         //Añadimos el actioncommand al menu item para controlar su action performed
-        this.vista.Menuconf.setActionCommand("AbrirDia");
-        this.vista.Menuconf.addActionListener(this);
+        this.vista.menuConexion.setActionCommand("AbrirDia");
+        this.vista.menuConexion.addActionListener(this);
         //Añadimos el actioncommand al boton guardar para controlar su action performed
         this.vista.BtnDiaConGuar.setActionCommand("DiaconfBtnGua");
         this.vista.BtnDiaConGuar.addActionListener(this);
