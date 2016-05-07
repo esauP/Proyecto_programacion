@@ -30,28 +30,29 @@ public class ConexionBD {
     private String server = "jdbc:mysql://" + host + "/" + bd;
 
     public ConexionBD() {
-            /**
-             * Leemos el archivo configuracion de los datos de acceso de la base de
-             * datos
-             */
+        /**
+         * Leemos el archivo configuracion de los datos de acceso de la base de
+         * datos
+         */
         try {
             leer();
-            /**
-             * Asignamos los valores para los datos de conexion
-             */
-            this.server = "jdbc:mysql://" + this.host + "/" + this.bd;
-            try {
-                Class.forName("com.mysql.jdbc.Driver");
-                conexion = (Connection) DriverManager.getConnection(this.server, this.user, this.password);
-                System.out.println("Conexion a base de datos " + this.server + " ...OK");
-            } catch (SQLException e) {
-                System.err.println(e.getMessage());
-            } catch (ClassNotFoundException e) {
-                System.err.println(e.getMessage());
-            }
         } catch (IOException ex) {
             System.err.println(ex.getMessage());
         }
+        /**
+         * Asignamos los valores para los datos de conexion
+         */
+        this.server = "jdbc:mysql://" + this.host + "/" + this.bd;
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            conexion = (Connection) DriverManager.getConnection(this.server, this.user, this.password);
+            System.out.println("Conexion a base de datos " + this.server + " ...OK");
+        } catch (SQLException e) {
+            System.err.println(e.getMessage());
+        } catch (ClassNotFoundException e) {
+            System.err.println(e.getMessage());
+        }
+
     }
 
     public Connection getConexion() {
