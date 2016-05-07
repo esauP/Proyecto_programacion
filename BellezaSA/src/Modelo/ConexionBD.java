@@ -13,8 +13,6 @@ import java.io.IOException;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.StringTokenizer;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
@@ -42,10 +40,12 @@ public class ConexionBD {
         /**
          * Asignamos los valores para los datos de conexion
          */
-        this.server = "jdbc:mysql://" + this.host + "/" + this.bd;
+        
         try {
             Class.forName("com.mysql.jdbc.Driver");
+        
             conexion = (Connection) DriverManager.getConnection(this.server, this.user, this.password);
+
             System.out.println("Conexion a base de datos " + this.server + " ...OK");
         } catch (SQLException e) {
             System.err.println(e.getMessage());
@@ -74,13 +74,11 @@ public class ConexionBD {
                 this.user = g.nextToken();
                 this.password = g.nextToken();
             }
-            System.out.println(host);
-            System.out.println("");
-            System.out.println(user);
-            System.out.println("");
-            System.out.println(password);
-            System.out.println("");
-            System.out.println(server);
+            this.bd = user + "_BellezaSA";
+            this.server = "jdbc:mysql://" + this.host + "/" + this.bd;
+
+            
+
         }
     }
 }
