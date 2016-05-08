@@ -469,7 +469,7 @@ public class Interfaz extends javax.swing.JFrame {
         gridBagConstraints.gridheight = 2;
         gridBagConstraints.ipadx = 349;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(18, 2, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(18, 5, 0, 0);
         jPanel1.add(textProvinciaCliente, gridBagConstraints);
 
         jLabel40.setText("Poblacion");
@@ -539,9 +539,9 @@ public class Interfaz extends javax.swing.JFrame {
         gridBagConstraints.gridy = 9;
         gridBagConstraints.gridwidth = 118;
         gridBagConstraints.gridheight = 2;
-        gridBagConstraints.ipadx = 512;
+        gridBagConstraints.ipadx = 507;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(18, 0, 0, 228);
+        gridBagConstraints.insets = new java.awt.Insets(18, 5, 0, 228);
         jPanel1.add(textPoblacionCliente, gridBagConstraints);
 
         jLabel44.setText("Apellido 2:");
@@ -627,7 +627,7 @@ public class Interfaz extends javax.swing.JFrame {
         DiaAñadirCLi.getContentPane().setLayout(DiaAñadirCLiLayout);
         DiaAñadirCLiLayout.setHorizontalGroup(
             DiaAñadirCLiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 891, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 896, Short.MAX_VALUE)
         );
         DiaAñadirCLiLayout.setVerticalGroup(
             DiaAñadirCLiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1323,7 +1323,6 @@ public class Interfaz extends javax.swing.JFrame {
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 1;
         gridBagConstraints.gridheight = 2;
-        gridBagConstraints.ipadx = 4;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_END;
         gridBagConstraints.insets = new java.awt.Insets(24, 0, 0, 109);
         paneEmpleados.add(jButton22, gridBagConstraints);
