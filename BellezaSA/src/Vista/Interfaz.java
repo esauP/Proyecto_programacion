@@ -645,6 +645,7 @@ public class Interfaz extends javax.swing.JFrame {
         );
 
         DiaAñadirEmp.setTitle("Empleados");
+        DiaAñadirEmp.getContentPane().setLayout(new java.awt.GridBagLayout());
 
         jPanel2.setMaximumSize(new java.awt.Dimension(2147483647, 2147483647));
         jPanel2.setMinimumSize(new java.awt.Dimension(891, 545));
@@ -793,16 +794,13 @@ public class Interfaz extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout DiaAñadirEmpLayout = new javax.swing.GroupLayout(DiaAñadirEmp.getContentPane());
-        DiaAñadirEmp.getContentPane().setLayout(DiaAñadirEmpLayout);
-        DiaAñadirEmpLayout.setHorizontalGroup(
-            DiaAñadirEmpLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
-        DiaAñadirEmpLayout.setVerticalGroup(
-            DiaAñadirEmpLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 341, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.ipadx = 143;
+        gridBagConstraints.ipady = -277;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        DiaAñadirEmp.getContentPane().add(jPanel2, gridBagConstraints);
 
         jLabel24.setText("Nombre");
 
