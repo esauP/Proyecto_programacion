@@ -37,13 +37,12 @@ public class Interfaz extends javax.swing.JFrame {
         TxtDiaPass = new javax.swing.JTextField();
         BtnDiaConGuar = new javax.swing.JButton();
         BtnDiaConCan = new javax.swing.JButton();
-        jTabbedPane1 = new javax.swing.JTabbedPane();
-        jPanel1 = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
-        jPanel3 = new javax.swing.JPanel();
-        jPanel4 = new javax.swing.JPanel();
-        jPanel5 = new javax.swing.JPanel();
+        tabPrincipal = new javax.swing.JTabbedPane();
+        paneTpv = new javax.swing.JPanel();
+        paneClientes = new javax.swing.JPanel();
+        paneProductos = new javax.swing.JPanel();
+        paneEmpleados = new javax.swing.JPanel();
+        paneProveedores = new javax.swing.JPanel();
         Menu = new javax.swing.JMenuBar();
         menuListados = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -115,78 +114,72 @@ public class Interfaz extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jTabbedPane1.setTabPlacement(javax.swing.JTabbedPane.LEFT);
+        tabPrincipal.setTabPlacement(javax.swing.JTabbedPane.LEFT);
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 1048, Short.MAX_VALUE)
-                .addContainerGap())
+        javax.swing.GroupLayout paneTpvLayout = new javax.swing.GroupLayout(paneTpv);
+        paneTpv.setLayout(paneTpvLayout);
+        paneTpvLayout.setHorizontalGroup(
+            paneTpvLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1078, Short.MAX_VALUE)
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 519, Short.MAX_VALUE)
-                .addContainerGap())
+        paneTpvLayout.setVerticalGroup(
+            paneTpvLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 563, Short.MAX_VALUE)
         );
 
-        jTabbedPane1.addTab("TPV", jPanel1);
+        tabPrincipal.addTab("TPV", paneTpv);
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1068, Short.MAX_VALUE)
+        javax.swing.GroupLayout paneClientesLayout = new javax.swing.GroupLayout(paneClientes);
+        paneClientes.setLayout(paneClientesLayout);
+        paneClientesLayout.setHorizontalGroup(
+            paneClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1078, Short.MAX_VALUE)
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 541, Short.MAX_VALUE)
-        );
-
-        jTabbedPane1.addTab("Clientes", jPanel2);
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1068, Short.MAX_VALUE)
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 541, Short.MAX_VALUE)
+        paneClientesLayout.setVerticalGroup(
+            paneClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 563, Short.MAX_VALUE)
         );
 
-        jTabbedPane1.addTab("Productos", jPanel3);
+        tabPrincipal.addTab("Clientes", paneClientes);
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1068, Short.MAX_VALUE)
+        javax.swing.GroupLayout paneProductosLayout = new javax.swing.GroupLayout(paneProductos);
+        paneProductos.setLayout(paneProductosLayout);
+        paneProductosLayout.setHorizontalGroup(
+            paneProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1078, Short.MAX_VALUE)
         );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 541, Short.MAX_VALUE)
-        );
-
-        jTabbedPane1.addTab("Empleados", jPanel4);
-
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1068, Short.MAX_VALUE)
-        );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 541, Short.MAX_VALUE)
+        paneProductosLayout.setVerticalGroup(
+            paneProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 563, Short.MAX_VALUE)
         );
 
-        jTabbedPane1.addTab("Proveedores", jPanel5);
+        tabPrincipal.addTab("Productos", paneProductos);
+
+        javax.swing.GroupLayout paneEmpleadosLayout = new javax.swing.GroupLayout(paneEmpleados);
+        paneEmpleados.setLayout(paneEmpleadosLayout);
+        paneEmpleadosLayout.setHorizontalGroup(
+            paneEmpleadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1078, Short.MAX_VALUE)
+        );
+        paneEmpleadosLayout.setVerticalGroup(
+            paneEmpleadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 563, Short.MAX_VALUE)
+        );
+
+        tabPrincipal.addTab("Empleados", paneEmpleados);
+
+        javax.swing.GroupLayout paneProveedoresLayout = new javax.swing.GroupLayout(paneProveedores);
+        paneProveedores.setLayout(paneProveedoresLayout);
+        paneProveedoresLayout.setHorizontalGroup(
+            paneProveedoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1078, Short.MAX_VALUE)
+        );
+        paneProveedoresLayout.setVerticalGroup(
+            paneProveedoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 563, Short.MAX_VALUE)
+        );
+
+        tabPrincipal.addTab("Proveedores", paneProveedores);
 
         menuListados.setText("Archivo");
 
@@ -233,20 +226,16 @@ public class Interfaz extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jTabbedPane1)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addComponent(tabPrincipal)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jTabbedPane1)
-                .addContainerGap())
+            .addComponent(tabPrincipal)
         );
 
-        jTabbedPane1.getAccessibleContext().setAccessibleName("TPV");
+        tabPrincipal.getAccessibleContext().setAccessibleName("TPV");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -299,17 +288,10 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JMenu menuArchivo;
     public javax.swing.JMenuItem menuClientes;
     public javax.swing.JMenuItem menuConexion;
@@ -317,5 +299,11 @@ public class Interfaz extends javax.swing.JFrame {
     public javax.swing.JMenuItem menuFacturas;
     private javax.swing.JMenu menuListados;
     public javax.swing.JMenuItem menuPrecio;
+    public javax.swing.JPanel paneClientes;
+    public javax.swing.JPanel paneEmpleados;
+    public javax.swing.JPanel paneProductos;
+    public javax.swing.JPanel paneProveedores;
+    public javax.swing.JPanel paneTpv;
+    public javax.swing.JTabbedPane tabPrincipal;
     // End of variables declaration//GEN-END:variables
 }

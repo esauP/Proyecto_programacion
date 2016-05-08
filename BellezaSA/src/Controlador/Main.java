@@ -14,7 +14,7 @@ import java.sql.SQLException;
  * @author Usuario
  */
 public class Main {
-    public static void main (String [] args) throws SQLException, IOException{
+    public static void main (String [] args) {
       new Controlador( new Interfaz() ).Iniciar() ;
     }
 }
