@@ -84,7 +84,7 @@ public class Interfaz extends javax.swing.JFrame {
         jLabel46 = new javax.swing.JLabel();
         jScrollPane6 = new javax.swing.JScrollPane();
         areaCliente = new javax.swing.JTextArea();
-        btnGuardarEmpleado = new javax.swing.JButton();
+        btnGuardarCliente = new javax.swing.JButton();
         btnCancelarCliente = new javax.swing.JButton();
         DiaAñadirEmp = new javax.swing.JDialog();
         jPanel2 = new javax.swing.JPanel();
@@ -99,7 +99,7 @@ public class Interfaz extends javax.swing.JFrame {
         textFechaAltaEmpleado = new javax.swing.JFormattedTextField();
         textEmailEmpleado = new javax.swing.JFormattedTextField();
         textNombreEmpleado = new javax.swing.JFormattedTextField();
-        textCod1 = new javax.swing.JFormattedTextField();
+        textCodEmpleado = new javax.swing.JFormattedTextField();
         jLabel23 = new javax.swing.JLabel();
         jLabel49 = new javax.swing.JLabel();
         textDniEmpleado = new javax.swing.JFormattedTextField();
@@ -110,7 +110,7 @@ public class Interfaz extends javax.swing.JFrame {
         textTelefonoEmpleado = new javax.swing.JFormattedTextField();
         jLabel54 = new javax.swing.JLabel();
         textApellidosEmpleado = new javax.swing.JFormattedTextField();
-        btnGuardarCliente1 = new javax.swing.JButton();
+        btnGuardarEmpleado = new javax.swing.JButton();
         btnCancelarEmpleado = new javax.swing.JButton();
         DiaAñadirPro = new javax.swing.JDialog();
         jLabel24 = new javax.swing.JLabel();
@@ -128,20 +128,29 @@ public class Interfaz extends javax.swing.JFrame {
         jButton12 = new javax.swing.JButton();
         jButton13 = new javax.swing.JButton();
         DiaAñadirProve = new javax.swing.JDialog();
-        jLabel30 = new javax.swing.JLabel();
-        jLabel31 = new javax.swing.JLabel();
-        jLabel32 = new javax.swing.JLabel();
-        jLabel33 = new javax.swing.JLabel();
-        jLabel34 = new javax.swing.JLabel();
-        jLabel35 = new javax.swing.JLabel();
-        jTextField26 = new javax.swing.JTextField();
-        jTextField27 = new javax.swing.JTextField();
-        jTextField28 = new javax.swing.JTextField();
-        jTextField29 = new javax.swing.JTextField();
-        jTextField30 = new javax.swing.JTextField();
-        jTextField31 = new javax.swing.JTextField();
-        jButton14 = new javax.swing.JButton();
-        jButton15 = new javax.swing.JButton();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel47 = new javax.swing.JLabel();
+        jLabel53 = new javax.swing.JLabel();
+        jLabel55 = new javax.swing.JLabel();
+        jLabel56 = new javax.swing.JLabel();
+        jLabel57 = new javax.swing.JLabel();
+        textProvinciaProveedor = new javax.swing.JFormattedTextField();
+        textCPProveedor = new javax.swing.JFormattedTextField();
+        textEmailProveedor = new javax.swing.JFormattedTextField();
+        textNombreProveedor = new javax.swing.JFormattedTextField();
+        textCodProveedor = new javax.swing.JFormattedTextField();
+        jLabel58 = new javax.swing.JLabel();
+        jLabel59 = new javax.swing.JLabel();
+        textNifProveedor = new javax.swing.JFormattedTextField();
+        jLabel60 = new javax.swing.JLabel();
+        textDireccionProveedor = new javax.swing.JFormattedTextField();
+        jLabel61 = new javax.swing.JLabel();
+        textPoblacionProveedor = new javax.swing.JFormattedTextField();
+        textTelefonoProveedor = new javax.swing.JFormattedTextField();
+        jLabel62 = new javax.swing.JLabel();
+        textWebProveedor = new javax.swing.JFormattedTextField();
+        btnGuardarProveedor = new javax.swing.JButton();
+        btnCancelarProveedor = new javax.swing.JButton();
         tabPrincipal = new javax.swing.JTabbedPane();
         paneTpv = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -616,14 +625,14 @@ public class Interfaz extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(18, 4, 0, 228);
         jPanel1.add(jScrollPane6, gridBagConstraints);
 
-        btnGuardarEmpleado.setText("Guardar");
+        btnGuardarCliente.setText("Guardar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 45;
         gridBagConstraints.gridy = 21;
         gridBagConstraints.gridwidth = 79;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(18, 3, 31, 0);
-        jPanel1.add(btnGuardarEmpleado, gridBagConstraints);
+        jPanel1.add(btnGuardarCliente, gridBagConstraints);
 
         btnCancelarCliente.setText("Cancelar");
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -663,7 +672,7 @@ public class Interfaz extends javax.swing.JFrame {
 
         jLabel22.setText("Cod:");
 
-        textCod1.setEditable(false);
+        textCodEmpleado.setEditable(false);
 
         jLabel23.setText("Provincia:");
 
@@ -681,7 +690,7 @@ public class Interfaz extends javax.swing.JFrame {
             }
         });
 
-        btnGuardarCliente1.setText("Guardar");
+        btnGuardarEmpleado.setText("Guardar");
 
         btnCancelarEmpleado.setText("Cancelar");
 
@@ -695,7 +704,7 @@ public class Interfaz extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel22)
                         .addGap(36, 36, 36)
-                        .addComponent(textCod1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(textCodEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -740,7 +749,7 @@ public class Interfaz extends javax.swing.JFrame {
                                         .addGap(18, 18, 18)
                                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(textTelefonoEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(btnGuardarCliente1, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                            .addComponent(btnGuardarEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel2Layout.createSequentialGroup()
@@ -756,7 +765,7 @@ public class Interfaz extends javax.swing.JFrame {
                 .addGap(25, 25, 25)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel22)
-                    .addComponent(textCod1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(textCodEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(28, 28, 28)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel21)
@@ -790,7 +799,7 @@ public class Interfaz extends javax.swing.JFrame {
                 .addGap(30, 30, 30)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCancelarEmpleado)
-                    .addComponent(btnGuardarCliente1))
+                    .addComponent(btnGuardarEmpleado))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -904,106 +913,229 @@ public class Interfaz extends javax.swing.JFrame {
                 .addGap(28, 28, 28))
         );
 
-        jLabel30.setText("Nombre");
+        DiaAñadirProve.setTitle("Proveedores");
+        DiaAñadirProve.setMinimumSize(new java.awt.Dimension(1034, 268));
+        DiaAñadirProve.setPreferredSize(new java.awt.Dimension(1177, 341));
 
-        jLabel31.setText("Telefono");
+        jPanel3.setMinimumSize(new java.awt.Dimension(891, 545));
+        jPanel3.setName("Proveedores"); // NOI18N
+        jPanel3.setPreferredSize(new java.awt.Dimension(1034, 618));
+        jPanel3.setLayout(new java.awt.GridBagLayout());
 
-        jLabel32.setText("jLabel14");
+        jLabel47.setText("Dirección:");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.gridwidth = 5;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(21, 55, 0, 0);
+        jPanel3.add(jLabel47, gridBagConstraints);
 
-        jLabel33.setText("jLabel15");
+        jLabel53.setText("NIF:");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 8;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(21, 55, 0, 0);
+        jPanel3.add(jLabel53, gridBagConstraints);
 
-        jLabel34.setText("jLabel16");
+        jLabel55.setText("Web:");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 8;
+        gridBagConstraints.gridy = 10;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(21, 27, 0, 0);
+        jPanel3.add(jLabel55, gridBagConstraints);
 
-        jLabel35.setText("jLabel17");
+        jLabel56.setText("Nombre:");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.gridwidth = 4;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(31, 55, 0, 0);
+        jPanel3.add(jLabel56, gridBagConstraints);
 
-        jTextField26.setText("jTextField8");
+        jLabel57.setText("Cod:");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(28, 55, 0, 0);
+        jPanel3.add(jLabel57, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 11;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.gridwidth = 3;
+        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.ipadx = 277;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(16, 18, 0, 0);
+        jPanel3.add(textProvinciaProveedor, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 15;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.gridwidth = 3;
+        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.ipadx = 124;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(16, 18, 0, 36);
+        jPanel3.add(textCPProveedor, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 6;
+        gridBagConstraints.gridy = 10;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.ipadx = 438;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(18, 10, 0, 0);
+        jPanel3.add(textEmailProveedor, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 6;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.gridwidth = 12;
+        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.ipadx = 1021;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(28, 10, 0, 36);
+        jPanel3.add(textNombreProveedor, gridBagConstraints);
 
-        jTextField27.setText("jTextField9");
+        textCodProveedor.setEditable(false);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 6;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.ipadx = 41;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(25, 10, 0, 0);
+        jPanel3.add(textCodProveedor, gridBagConstraints);
 
-        jTextField28.setText("jTextField10");
+        jLabel58.setText("Provincia:");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 8;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.gridwidth = 3;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(19, 27, 0, 0);
+        jPanel3.add(jLabel58, gridBagConstraints);
 
-        jTextField29.setText("jTextField11");
+        jLabel59.setText("Población:");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.gridwidth = 6;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(19, 55, 0, 0);
+        jPanel3.add(jLabel59, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 6;
+        gridBagConstraints.gridy = 8;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.ipadx = 438;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(18, 10, 0, 0);
+        jPanel3.add(textNifProveedor, gridBagConstraints);
 
-        jTextField30.setText("jTextField12");
+        jLabel60.setText("Teléfono:");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 8;
+        gridBagConstraints.gridy = 8;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(21, 27, 0, 0);
+        jPanel3.add(jLabel60, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 6;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.gridwidth = 12;
+        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.ipadx = 1023;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(18, 8, 0, 36);
+        jPanel3.add(textDireccionProveedor, gridBagConstraints);
 
-        jTextField31.setText("jTextField13");
+        jLabel61.setText("Email:");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 10;
+        gridBagConstraints.gridwidth = 3;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(21, 55, 0, 0);
+        jPanel3.add(jLabel61, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 6;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.ipadx = 438;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(16, 10, 0, 0);
+        jPanel3.add(textPoblacionProveedor, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 11;
+        gridBagConstraints.gridy = 8;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.ipadx = 211;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(18, 18, 0, 0);
+        jPanel3.add(textTelefonoProveedor, gridBagConstraints);
 
-        jButton14.setText("Añadir");
+        jLabel62.setText("C.P.");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 14;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(19, 39, 0, 0);
+        jPanel3.add(jLabel62, gridBagConstraints);
 
-        jButton15.setText("Cancelar");
+        textWebProveedor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textWebProveedorActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 11;
+        gridBagConstraints.gridy = 10;
+        gridBagConstraints.gridwidth = 7;
+        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.ipadx = 485;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(18, 18, 0, 36);
+        jPanel3.add(textWebProveedor, gridBagConstraints);
+
+        btnGuardarProveedor.setText("Guardar");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 11;
+        gridBagConstraints.gridy = 12;
+        gridBagConstraints.ipadx = 34;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(18, 18, 94, 0);
+        jPanel3.add(btnGuardarProveedor, gridBagConstraints);
+
+        btnCancelarProveedor.setText("Cancelar");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 14;
+        gridBagConstraints.gridy = 12;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.ipadx = 30;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(18, 21, 94, 0);
+        jPanel3.add(btnCancelarProveedor, gridBagConstraints);
 
         javax.swing.GroupLayout DiaAñadirProveLayout = new javax.swing.GroupLayout(DiaAñadirProve.getContentPane());
         DiaAñadirProve.getContentPane().setLayout(DiaAñadirProveLayout);
         DiaAñadirProveLayout.setHorizontalGroup(
             DiaAñadirProveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(DiaAñadirProveLayout.createSequentialGroup()
-                .addGap(42, 42, 42)
-                .addGroup(DiaAñadirProveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(DiaAñadirProveLayout.createSequentialGroup()
-                        .addGroup(DiaAñadirProveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(DiaAñadirProveLayout.createSequentialGroup()
-                                .addComponent(jLabel30)
-                                .addGap(18, 18, 18)
-                                .addComponent(jTextField26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(DiaAñadirProveLayout.createSequentialGroup()
-                                .addComponent(jLabel31)
-                                .addGap(18, 18, 18)
-                                .addComponent(jTextField27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(DiaAñadirProveLayout.createSequentialGroup()
-                                .addComponent(jLabel32)
-                                .addGap(18, 18, 18)
-                                .addComponent(jTextField28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(DiaAñadirProveLayout.createSequentialGroup()
-                                .addComponent(jLabel33)
-                                .addGap(18, 18, 18)
-                                .addComponent(jTextField29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(DiaAñadirProveLayout.createSequentialGroup()
-                                .addComponent(jLabel34)
-                                .addGap(18, 18, 18)
-                                .addComponent(jTextField30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(DiaAñadirProveLayout.createSequentialGroup()
-                                .addComponent(jLabel35)
-                                .addGap(18, 18, 18)
-                                .addComponent(jTextField31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(DiaAñadirProveLayout.createSequentialGroup()
-                        .addComponent(jButton14)
-                        .addGap(27, 27, 27)
-                        .addComponent(jButton15)
-                        .addGap(34, 34, 34))))
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 1177, Short.MAX_VALUE)
         );
         DiaAñadirProveLayout.setVerticalGroup(
             DiaAñadirProveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(DiaAñadirProveLayout.createSequentialGroup()
-                .addGap(48, 48, 48)
-                .addGroup(DiaAñadirProveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel30)
-                    .addComponent(jTextField26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(DiaAñadirProveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel31)
-                    .addComponent(jTextField27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(DiaAñadirProveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel32)
-                    .addComponent(jTextField28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(DiaAñadirProveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel33)
-                    .addComponent(jTextField29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(DiaAñadirProveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel34)
-                    .addComponent(jTextField30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(DiaAñadirProveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel35)
-                    .addComponent(jTextField31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
-                .addGroup(DiaAñadirProveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton14)
-                    .addComponent(jButton15))
-                .addGap(28, 28, 28))
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 378, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 73, Short.MAX_VALUE))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -1549,6 +1681,10 @@ public class Interfaz extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_textApellidosEmpleadoActionPerformed
 
+    private void textWebProveedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textWebProveedorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textWebProveedorActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1604,13 +1740,13 @@ public class Interfaz extends javax.swing.JFrame {
     public javax.swing.JTextArea areaCliente;
     private javax.swing.JButton btnCancelarCliente;
     private javax.swing.JButton btnCancelarEmpleado;
-    public javax.swing.JButton btnGuardarCliente1;
+    private javax.swing.JButton btnCancelarProveedor;
+    public javax.swing.JButton btnGuardarCliente;
     public javax.swing.JButton btnGuardarEmpleado;
+    private javax.swing.JButton btnGuardarProveedor;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton14;
-    private javax.swing.JButton jButton15;
     private javax.swing.JButton jButton16;
     private javax.swing.JButton jButton17;
     private javax.swing.JButton jButton18;
@@ -1653,12 +1789,6 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel30;
-    private javax.swing.JLabel jLabel31;
-    private javax.swing.JLabel jLabel32;
-    private javax.swing.JLabel jLabel33;
-    private javax.swing.JLabel jLabel34;
-    private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
@@ -1671,13 +1801,23 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel44;
     private javax.swing.JLabel jLabel45;
     private javax.swing.JLabel jLabel46;
+    private javax.swing.JLabel jLabel47;
     private javax.swing.JLabel jLabel48;
     private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel51;
     private javax.swing.JLabel jLabel52;
+    private javax.swing.JLabel jLabel53;
     private javax.swing.JLabel jLabel54;
+    private javax.swing.JLabel jLabel55;
+    private javax.swing.JLabel jLabel56;
+    private javax.swing.JLabel jLabel57;
+    private javax.swing.JLabel jLabel58;
+    private javax.swing.JLabel jLabel59;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel60;
+    private javax.swing.JLabel jLabel61;
+    private javax.swing.JLabel jLabel62;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
@@ -1688,6 +1828,7 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem4;
     public javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JRadioButton jRadioButton3;
@@ -1712,13 +1853,7 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField23;
     private javax.swing.JTextField jTextField24;
     private javax.swing.JTextField jTextField25;
-    private javax.swing.JTextField jTextField26;
-    private javax.swing.JTextField jTextField27;
-    private javax.swing.JTextField jTextField28;
-    private javax.swing.JTextField jTextField29;
     private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField30;
-    private javax.swing.JTextField jTextField31;
     private javax.swing.JTextField jTextField32;
     private javax.swing.JTextField jTextField33;
     private javax.swing.JTextField jTextField35;
@@ -1744,24 +1879,34 @@ public class Interfaz extends javax.swing.JFrame {
     public javax.swing.JFormattedTextField textApellidosEmpleado;
     public javax.swing.JFormattedTextField textCPCliente;
     public javax.swing.JFormattedTextField textCPEmpleado;
+    private javax.swing.JFormattedTextField textCPProveedor;
     public javax.swing.JFormattedTextField textCod;
-    public javax.swing.JFormattedTextField textCod1;
+    public javax.swing.JFormattedTextField textCodEmpleado;
+    private javax.swing.JFormattedTextField textCodProveedor;
     public javax.swing.JFormattedTextField textDireccionCliente;
     public javax.swing.JFormattedTextField textDireccionEmpleado;
+    private javax.swing.JFormattedTextField textDireccionProveedor;
     public javax.swing.JFormattedTextField textDniCliente;
     public javax.swing.JFormattedTextField textDniEmpleado;
     public javax.swing.JFormattedTextField textEmailCliente;
     public javax.swing.JFormattedTextField textEmailEmpleado;
+    private javax.swing.JFormattedTextField textEmailProveedor;
     public javax.swing.JFormattedTextField textFe_NatoCliente;
     public javax.swing.JFormattedTextField textFechaAltaEmpleado;
+    private javax.swing.JFormattedTextField textNifProveedor;
     public javax.swing.JFormattedTextField textNombreCliente;
     public javax.swing.JFormattedTextField textNombreEmpleado;
+    private javax.swing.JFormattedTextField textNombreProveedor;
     public javax.swing.JFormattedTextField textPoblacionCliente;
     public javax.swing.JFormattedTextField textPoblacionEmpleado;
+    private javax.swing.JFormattedTextField textPoblacionProveedor;
     public javax.swing.JFormattedTextField textProvinciaCliente;
     public javax.swing.JFormattedTextField textProvinciaEmpleado;
+    private javax.swing.JFormattedTextField textProvinciaProveedor;
     public javax.swing.JFormattedTextField textTelefono2Cliente;
     public javax.swing.JFormattedTextField textTelefonoCliente;
     public javax.swing.JFormattedTextField textTelefonoEmpleado;
+    private javax.swing.JFormattedTextField textTelefonoProveedor;
+    private javax.swing.JFormattedTextField textWebProveedor;
     // End of variables declaration//GEN-END:variables
 }
