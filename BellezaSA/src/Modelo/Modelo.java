@@ -5,9 +5,12 @@
  */
 package Modelo;
 
+import java.io.BufferedReader;
 import java.io.FileOutputStream;
+import java.io.FileReader;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.StringTokenizer;
 
 /**
  *
@@ -17,6 +20,28 @@ public class Modelo extends ConexionBD {
 
     public Modelo() {
 
+    }
+
+    /**
+     * Metodo que usamos para recuperar los datos para poder visualizarlos en el
+     * Dialogo de configuracion
+     *
+     * @return String [] - Con los datos de la base de datos
+     * @throws IOException
+     */
+    public String[] GetBdconf() throws IOException {
+        String[] data = new String[3];
+        String s;
+        BufferedReader f = new BufferedReader(new FileReader("setup.txt"));
+
+        while ((s = f.readLine()) != null) {
+            StringTokenizer g = new StringTokenizer(s, ",");
+            for (int i = 0; i < 3; i++) {
+                data[i] = g.nextToken();
+            }
+        }
+
+        return data;
     }
 
     /**
