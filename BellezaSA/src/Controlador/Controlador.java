@@ -37,7 +37,6 @@ public class Controlador implements ActionListener, MouseListener {
     public enum AccionMVC {
 
         // Dialogo Configuración
-
         AbrirDia,
         DiaconfBtnGua,
         DiaconfBtnCan,
@@ -91,7 +90,7 @@ public class Controlador implements ActionListener, MouseListener {
         this.vista.btnFacturarTPV.setActionCommand("Facturar");
         this.vista.btnFacturarTPV.addActionListener(this);
 
-        //Añadirmos la accion de los botones correspondientes al panel Clientes
+        //Añadimos la accion de los botones correspondientes al panel Clientes
         this.vista.btnAniadeClientes.setActionCommand("AñadirCli");
         this.vista.btnAniadeClientes.addActionListener(this);
         this.vista.btnModificaClientes.setActionCommand("ModificarCli");
@@ -100,9 +99,33 @@ public class Controlador implements ActionListener, MouseListener {
         this.vista.btnEliminarClientes.addActionListener(this);
         this.vista.btnVerClientes.setActionCommand("VerCli");
         this.vista.btnVerClientes.addActionListener(this);
-        //Añadirmos la accion de los botones correspondientes al panel Empleados
-
-        //Añadirmos la accion de los botones correspondientes al panel Proveedores
+        //Añadimos la accion de los botones correspondientes al panel Empleados
+        this.vista.btnAniadeEmpleado.setActionCommand("AnyadirEmp");
+        this.vista.btnAniadeEmpleado.addActionListener(this);
+        this.vista.btnModificarEmpleado.setActionCommand("ModificarEmp");
+        this.vista.btnModificarEmpleado.addActionListener(this);
+        this.vista.btnEliminarEmpleado.setActionCommand("EliminarEmp");
+        this.vista.btnEliminarEmpleado.addActionListener(this);
+        this.vista.btnVerEmpleado.setActionCommand("VerEmp");
+        this.vista.btnVerEmpleado.addActionListener(this);
+        //Añadimos la accion de los botones correspondientes al panel Proveedores
+        this.vista.btnAniadeProveedores.setActionCommand("AnyadirProv");
+        this.vista.btnAniadeProveedores.addActionListener(this);
+        this.vista.btnModificaProveedores.setActionCommand("ModificarProv");
+        this.vista.btnModificaProveedores.addActionListener(this);
+        this.vista.btnEliminarProveedores.setActionCommand("EliminarProv");
+        this.vista.btnEliminarProveedores.addActionListener(this);
+        this.vista.btnVerProveedores.setActionCommand("VerProv");
+        this.vista.btnVerProveedores.addActionListener(this);
+        //Añadimos la accion de los botones correspondientes al panel Productos
+        this.vista.btnAniadeProductos.setActionCommand("AnyadirProd");
+        this.vista.btnAniadeProductos.addActionListener(this);
+        this.vista.btnModificarProductos.setActionCommand("ModificarProd");
+        this.vista.btnModificarProductos.addActionListener(this);
+        this.vista.btnEliminarProductos.setActionCommand("EliminarProd");
+        this.vista.btnEliminarProductos.addActionListener(this);
+        this.vista.btnVerProductos.setActionCommand("VerProd");
+        this.vista.btnVerProductos.addActionListener(this);
     }
 
     @Override
@@ -119,7 +142,7 @@ public class Controlador implements ActionListener, MouseListener {
 
                 try {
                     temp = this.mo.GetBdconf();
-                    
+
                 } catch (IOException ex) {
                     Logger.getLogger(Controlador.class.getName()).log(Level.SEVERE, null, ex);
                 }
@@ -201,10 +224,11 @@ public class Controlador implements ActionListener, MouseListener {
                 break;
             case VerProv:
                 break;
-                //Cierre del control del panel Proveedores
+            //Cierre del control del panel Proveedores
 
         }
     }
+
     @Override
     public void mouseClicked(MouseEvent e) {
 
