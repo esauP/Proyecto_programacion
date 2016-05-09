@@ -154,54 +154,54 @@ public class Interfaz extends javax.swing.JFrame {
         tabPrincipal = new javax.swing.JTabbedPane();
         paneTpv = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        jButton1 = new javax.swing.JButton();
+        tablaFacturacion = new javax.swing.JTable();
+        btnSalirTPV = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        textDescuento = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jButton2 = new javax.swing.JButton();
+        textTotla = new javax.swing.JTextField();
+        btnFacturarTPV = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        textNumeroFactura = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList();
-        jComboBox1 = new javax.swing.JComboBox();
+        listProductos = new javax.swing.JList();
+        comboClientes = new javax.swing.JComboBox();
         paneClientes = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
-        jTextField7 = new javax.swing.JTextField();
+        tableClientes = new javax.swing.JTable();
+        textBusquedaClientes = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
+        btnModificaClientes = new javax.swing.JButton();
+        btnEliminarClientes = new javax.swing.JButton();
+        btnAniadeClientes = new javax.swing.JButton();
+        btnVerClientes = new javax.swing.JButton();
         paneProductos = new javax.swing.JPanel();
         jScrollPane4 = new javax.swing.JScrollPane();
-        jTable3 = new javax.swing.JTable();
-        jTextField32 = new javax.swing.JTextField();
+        tableProductos = new javax.swing.JTable();
+        textBusquedaProductos = new javax.swing.JTextField();
         jLabel36 = new javax.swing.JLabel();
-        jButton16 = new javax.swing.JButton();
-        jButton17 = new javax.swing.JButton();
-        jButton18 = new javax.swing.JButton();
-        jButton19 = new javax.swing.JButton();
+        btnModificarProductos = new javax.swing.JButton();
+        btnEliminarProductos = new javax.swing.JButton();
+        btnAniadeProductos = new javax.swing.JButton();
+        btnVerProductos = new javax.swing.JButton();
         paneEmpleados = new javax.swing.JPanel();
         jScrollPane5 = new javax.swing.JScrollPane();
-        jTable4 = new javax.swing.JTable();
-        jTextField33 = new javax.swing.JTextField();
+        tableEmpleados = new javax.swing.JTable();
+        textBusquedaEmpleado = new javax.swing.JTextField();
         jLabel37 = new javax.swing.JLabel();
-        jButton20 = new javax.swing.JButton();
-        jButton21 = new javax.swing.JButton();
-        jButton22 = new javax.swing.JButton();
-        jButton23 = new javax.swing.JButton();
+        btnModificarEmpleado = new javax.swing.JButton();
+        btnEliminarEmpleado = new javax.swing.JButton();
+        btnAniadeEmpleado = new javax.swing.JButton();
+        btnVerEmpleado = new javax.swing.JButton();
         paneProveedores = new javax.swing.JPanel();
         jScrollPane7 = new javax.swing.JScrollPane();
-        jTable6 = new javax.swing.JTable();
-        jTextField35 = new javax.swing.JTextField();
+        tableProveedores = new javax.swing.JTable();
+        textBusquedaProveedores = new javax.swing.JTextField();
         jLabel39 = new javax.swing.JLabel();
-        jButton28 = new javax.swing.JButton();
-        jButton29 = new javax.swing.JButton();
-        jButton30 = new javax.swing.JButton();
-        jButton31 = new javax.swing.JButton();
+        btnModificaProveedores = new javax.swing.JButton();
+        btnEliminarProveedores = new javax.swing.JButton();
+        btnAniadeProveedores = new javax.swing.JButton();
+        btnVerProveedores = new javax.swing.JButton();
         Menu = new javax.swing.JMenuBar();
         menuListados = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -915,7 +915,6 @@ public class Interfaz extends javax.swing.JFrame {
 
         DiaAñadirProve.setTitle("Proveedores");
         DiaAñadirProve.setMinimumSize(new java.awt.Dimension(1034, 268));
-        DiaAñadirProve.setPreferredSize(new java.awt.Dimension(1177, 341));
 
         jPanel3.setMinimumSize(new java.awt.Dimension(891, 545));
         jPanel3.setName("Proveedores"); // NOI18N
@@ -1145,7 +1144,7 @@ public class Interfaz extends javax.swing.JFrame {
 
         paneTpv.setLayout(new java.awt.GridBagLayout());
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tablaFacturacion.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -1156,7 +1155,7 @@ public class Interfaz extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tablaFacturacion);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
@@ -1172,7 +1171,7 @@ public class Interfaz extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(36, 70, 0, 63);
         paneTpv.add(jScrollPane1, gridBagConstraints);
 
-        jButton1.setText("Salir");
+        btnSalirTPV.setText("Salir");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 7;
         gridBagConstraints.gridy = 0;
@@ -1181,7 +1180,7 @@ public class Interfaz extends javax.swing.JFrame {
         gridBagConstraints.ipady = 13;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
         gridBagConstraints.insets = new java.awt.Insets(25, 90, 0, 63);
-        paneTpv.add(jButton1, gridBagConstraints);
+        paneTpv.add(btnSalirTPV, gridBagConstraints);
 
         jLabel4.setText("Descuento");
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -1192,8 +1191,6 @@ public class Interfaz extends javax.swing.JFrame {
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(21, 120, 0, 0);
         paneTpv.add(jLabel4, gridBagConstraints);
-
-        jTextField1.setText("jTextField1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 5;
@@ -1202,7 +1199,7 @@ public class Interfaz extends javax.swing.JFrame {
         gridBagConstraints.ipady = 10;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(18, 18, 0, 0);
-        paneTpv.add(jTextField1, gridBagConstraints);
+        paneTpv.add(textDescuento, gridBagConstraints);
 
         jLabel5.setText("Total");
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -1213,8 +1210,6 @@ public class Interfaz extends javax.swing.JFrame {
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(21, 88, 0, 0);
         paneTpv.add(jLabel5, gridBagConstraints);
-
-        jTextField2.setText("jTextField2");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 5;
@@ -1223,16 +1218,16 @@ public class Interfaz extends javax.swing.JFrame {
         gridBagConstraints.ipady = 10;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(18, 18, 0, 0);
-        paneTpv.add(jTextField2, gridBagConstraints);
+        paneTpv.add(textTotla, gridBagConstraints);
 
-        jButton2.setText("Facturar");
+        btnFacturarTPV.setText("Facturar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 7;
         gridBagConstraints.gridy = 5;
         gridBagConstraints.ipadx = 3;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
         gridBagConstraints.insets = new java.awt.Insets(18, 0, 32, 63);
-        paneTpv.add(jButton2, gridBagConstraints);
+        paneTpv.add(btnFacturarTPV, gridBagConstraints);
 
         jLabel6.setText("Factura Nº");
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -1242,8 +1237,7 @@ public class Interfaz extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(51, 225, 0, 17);
         paneTpv.add(jLabel6, gridBagConstraints);
 
-        jTextField3.setText("jTextField3");
-        jTextField3.setEnabled(false);
+        textNumeroFactura.setEnabled(false);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 7;
         gridBagConstraints.gridy = 0;
@@ -1251,14 +1245,14 @@ public class Interfaz extends javax.swing.JFrame {
         gridBagConstraints.ipadx = 53;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(48, 0, 0, 0);
-        paneTpv.add(jTextField3, gridBagConstraints);
+        paneTpv.add(textNumeroFactura, gridBagConstraints);
 
-        jList1.setModel(new javax.swing.AbstractListModel() {
+        listProductos.setModel(new javax.swing.AbstractListModel() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
             public Object getElementAt(int i) { return strings[i]; }
         });
-        jScrollPane2.setViewportView(jList1);
+        jScrollPane2.setViewportView(listProductos);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -1272,20 +1266,21 @@ public class Interfaz extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(36, 32, 0, 0);
         paneTpv.add(jScrollPane2, gridBagConstraints);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        comboClientes.setEditable(true);
+        comboClientes.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
-        gridBagConstraints.ipadx = 30;
+        gridBagConstraints.ipadx = 77;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(62, 32, 0, 0);
-        paneTpv.add(jComboBox1, gridBagConstraints);
+        paneTpv.add(comboClientes, gridBagConstraints);
 
         tabPrincipal.addTab("TPV", paneTpv);
 
         paneClientes.setLayout(new java.awt.GridBagLayout());
 
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+        tableClientes.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -1296,7 +1291,7 @@ public class Interfaz extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane3.setViewportView(jTable2);
+        jScrollPane3.setViewportView(tableClientes);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -1310,8 +1305,6 @@ public class Interfaz extends javax.swing.JFrame {
         gridBagConstraints.weighty = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(35, 42, 33, 41);
         paneClientes.add(jScrollPane3, gridBagConstraints);
-
-        jTextField7.setText("jTextField7");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 2;
@@ -1319,7 +1312,7 @@ public class Interfaz extends javax.swing.JFrame {
         gridBagConstraints.ipadx = 299;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(24, 42, 0, 0);
-        paneClientes.add(jTextField7, gridBagConstraints);
+        paneClientes.add(textBusquedaClientes, gridBagConstraints);
 
         jLabel11.setText("Busqueda");
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -1329,16 +1322,16 @@ public class Interfaz extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(28, 42, 0, 0);
         paneClientes.add(jLabel11, gridBagConstraints);
 
-        jButton4.setText("Modificar");
+        btnModificaClientes.setText("Modificar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 1;
         gridBagConstraints.gridheight = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
         gridBagConstraints.insets = new java.awt.Insets(24, 0, 0, 185);
-        paneClientes.add(jButton4, gridBagConstraints);
+        paneClientes.add(btnModificaClientes, gridBagConstraints);
 
-        jButton5.setText("Eliminar");
+        btnEliminarClientes.setText("Eliminar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 1;
@@ -1346,31 +1339,31 @@ public class Interfaz extends javax.swing.JFrame {
         gridBagConstraints.ipadx = 1;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
         gridBagConstraints.insets = new java.awt.Insets(24, 0, 0, 280);
-        paneClientes.add(jButton5, gridBagConstraints);
+        paneClientes.add(btnEliminarClientes, gridBagConstraints);
 
-        jButton6.setText("Añadir");
+        btnAniadeClientes.setText("Añadir");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 1;
         gridBagConstraints.gridheight = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
         gridBagConstraints.insets = new java.awt.Insets(24, 0, 0, 109);
-        paneClientes.add(jButton6, gridBagConstraints);
+        paneClientes.add(btnAniadeClientes, gridBagConstraints);
 
-        jButton7.setText("Ver");
+        btnVerClientes.setText("Ver");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 1;
         gridBagConstraints.gridheight = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
         gridBagConstraints.insets = new java.awt.Insets(24, 0, 0, 41);
-        paneClientes.add(jButton7, gridBagConstraints);
+        paneClientes.add(btnVerClientes, gridBagConstraints);
 
         tabPrincipal.addTab("Clientes", paneClientes);
 
         paneProductos.setLayout(new java.awt.GridBagLayout());
 
-        jTable3.setModel(new javax.swing.table.DefaultTableModel(
+        tableProductos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -1381,7 +1374,7 @@ public class Interfaz extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane4.setViewportView(jTable3);
+        jScrollPane4.setViewportView(tableProductos);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -1395,8 +1388,6 @@ public class Interfaz extends javax.swing.JFrame {
         gridBagConstraints.weighty = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(35, 42, 33, 41);
         paneProductos.add(jScrollPane4, gridBagConstraints);
-
-        jTextField32.setText("jTextField7");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 2;
@@ -1404,7 +1395,7 @@ public class Interfaz extends javax.swing.JFrame {
         gridBagConstraints.ipadx = 299;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(24, 42, 0, 0);
-        paneProductos.add(jTextField32, gridBagConstraints);
+        paneProductos.add(textBusquedaProductos, gridBagConstraints);
 
         jLabel36.setText("Busqueda");
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -1414,47 +1405,47 @@ public class Interfaz extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(28, 42, 0, 0);
         paneProductos.add(jLabel36, gridBagConstraints);
 
-        jButton16.setText("Modificar");
+        btnModificarProductos.setText("Modificar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 1;
         gridBagConstraints.gridheight = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
         gridBagConstraints.insets = new java.awt.Insets(24, 0, 0, 185);
-        paneProductos.add(jButton16, gridBagConstraints);
+        paneProductos.add(btnModificarProductos, gridBagConstraints);
 
-        jButton17.setText("Eliminar");
+        btnEliminarProductos.setText("Eliminar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 1;
         gridBagConstraints.gridheight = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
         gridBagConstraints.insets = new java.awt.Insets(24, 0, 0, 280);
-        paneProductos.add(jButton17, gridBagConstraints);
+        paneProductos.add(btnEliminarProductos, gridBagConstraints);
 
-        jButton18.setText("Añadir");
+        btnAniadeProductos.setText("Añadir");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 1;
         gridBagConstraints.gridheight = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
         gridBagConstraints.insets = new java.awt.Insets(24, 0, 0, 109);
-        paneProductos.add(jButton18, gridBagConstraints);
+        paneProductos.add(btnAniadeProductos, gridBagConstraints);
 
-        jButton19.setText("Ver");
+        btnVerProductos.setText("Ver");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 1;
         gridBagConstraints.gridheight = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
         gridBagConstraints.insets = new java.awt.Insets(24, 0, 0, 41);
-        paneProductos.add(jButton19, gridBagConstraints);
+        paneProductos.add(btnVerProductos, gridBagConstraints);
 
         tabPrincipal.addTab("Productos", paneProductos);
 
         paneEmpleados.setLayout(new java.awt.GridBagLayout());
 
-        jTable4.setModel(new javax.swing.table.DefaultTableModel(
+        tableEmpleados.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -1465,7 +1456,7 @@ public class Interfaz extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane5.setViewportView(jTable4);
+        jScrollPane5.setViewportView(tableEmpleados);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -1480,7 +1471,7 @@ public class Interfaz extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(35, 42, 33, 41);
         paneEmpleados.add(jScrollPane5, gridBagConstraints);
 
-        jTextField33.setText("jTextField7");
+        textBusquedaEmpleado.setText("jTextField7");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 2;
@@ -1488,7 +1479,7 @@ public class Interfaz extends javax.swing.JFrame {
         gridBagConstraints.ipadx = 299;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(24, 42, 0, 0);
-        paneEmpleados.add(jTextField33, gridBagConstraints);
+        paneEmpleados.add(textBusquedaEmpleado, gridBagConstraints);
 
         jLabel37.setText("Busqueda");
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -1498,47 +1489,47 @@ public class Interfaz extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(28, 42, 0, 0);
         paneEmpleados.add(jLabel37, gridBagConstraints);
 
-        jButton20.setText("Modificar");
+        btnModificarEmpleado.setText("Modificar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 1;
         gridBagConstraints.gridheight = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
         gridBagConstraints.insets = new java.awt.Insets(24, 0, 0, 185);
-        paneEmpleados.add(jButton20, gridBagConstraints);
+        paneEmpleados.add(btnModificarEmpleado, gridBagConstraints);
 
-        jButton21.setText("Eliminar");
+        btnEliminarEmpleado.setText("Eliminar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 1;
         gridBagConstraints.gridheight = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_END;
         gridBagConstraints.insets = new java.awt.Insets(24, 0, 0, 280);
-        paneEmpleados.add(jButton21, gridBagConstraints);
+        paneEmpleados.add(btnEliminarEmpleado, gridBagConstraints);
 
-        jButton22.setText("Añadir");
+        btnAniadeEmpleado.setText("Añadir");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 1;
         gridBagConstraints.gridheight = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_END;
         gridBagConstraints.insets = new java.awt.Insets(24, 0, 0, 109);
-        paneEmpleados.add(jButton22, gridBagConstraints);
+        paneEmpleados.add(btnAniadeEmpleado, gridBagConstraints);
 
-        jButton23.setText("Ver");
+        btnVerEmpleado.setText("Ver");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 1;
         gridBagConstraints.gridheight = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
         gridBagConstraints.insets = new java.awt.Insets(24, 0, 0, 41);
-        paneEmpleados.add(jButton23, gridBagConstraints);
+        paneEmpleados.add(btnVerEmpleado, gridBagConstraints);
 
         tabPrincipal.addTab("Empleados", paneEmpleados);
 
         paneProveedores.setLayout(new java.awt.GridBagLayout());
 
-        jTable6.setModel(new javax.swing.table.DefaultTableModel(
+        tableProveedores.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -1549,7 +1540,7 @@ public class Interfaz extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane7.setViewportView(jTable6);
+        jScrollPane7.setViewportView(tableProveedores);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -1563,8 +1554,6 @@ public class Interfaz extends javax.swing.JFrame {
         gridBagConstraints.weighty = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(35, 42, 33, 41);
         paneProveedores.add(jScrollPane7, gridBagConstraints);
-
-        jTextField35.setText("jTextField7");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 2;
@@ -1572,7 +1561,7 @@ public class Interfaz extends javax.swing.JFrame {
         gridBagConstraints.ipadx = 299;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(24, 42, 0, 0);
-        paneProveedores.add(jTextField35, gridBagConstraints);
+        paneProveedores.add(textBusquedaProveedores, gridBagConstraints);
 
         jLabel39.setText("Busqueda");
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -1582,41 +1571,41 @@ public class Interfaz extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(28, 42, 0, 0);
         paneProveedores.add(jLabel39, gridBagConstraints);
 
-        jButton28.setText("Modificar");
+        btnModificaProveedores.setText("Modificar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 1;
         gridBagConstraints.gridheight = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
         gridBagConstraints.insets = new java.awt.Insets(24, 0, 0, 185);
-        paneProveedores.add(jButton28, gridBagConstraints);
+        paneProveedores.add(btnModificaProveedores, gridBagConstraints);
 
-        jButton29.setText("Eliminar");
+        btnEliminarProveedores.setText("Eliminar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 1;
         gridBagConstraints.gridheight = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
         gridBagConstraints.insets = new java.awt.Insets(24, 0, 0, 280);
-        paneProveedores.add(jButton29, gridBagConstraints);
+        paneProveedores.add(btnEliminarProveedores, gridBagConstraints);
 
-        jButton30.setText("Añadir");
+        btnAniadeProveedores.setText("Añadir");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 1;
         gridBagConstraints.gridheight = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
         gridBagConstraints.insets = new java.awt.Insets(24, 0, 0, 109);
-        paneProveedores.add(jButton30, gridBagConstraints);
+        paneProveedores.add(btnAniadeProveedores, gridBagConstraints);
 
-        jButton31.setText("Ver");
+        btnVerProveedores.setText("Ver");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 1;
         gridBagConstraints.gridheight = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
         gridBagConstraints.insets = new java.awt.Insets(24, 0, 0, 41);
-        paneProveedores.add(jButton31, gridBagConstraints);
+        paneProveedores.add(btnVerProveedores, gridBagConstraints);
 
         tabPrincipal.addTab("Proveedores", paneProveedores);
 
@@ -1738,34 +1727,34 @@ public class Interfaz extends javax.swing.JFrame {
     public javax.swing.JTextField TxtDiaPass;
     public javax.swing.JTextField TxtDiaUsu;
     public javax.swing.JTextArea areaCliente;
+    public javax.swing.JButton btnAniadeClientes;
+    public javax.swing.JButton btnAniadeEmpleado;
+    public javax.swing.JButton btnAniadeProductos;
+    public javax.swing.JButton btnAniadeProveedores;
     private javax.swing.JButton btnCancelarCliente;
     private javax.swing.JButton btnCancelarEmpleado;
     private javax.swing.JButton btnCancelarProveedor;
+    public javax.swing.JButton btnEliminarClientes;
+    public javax.swing.JButton btnEliminarEmpleado;
+    public javax.swing.JButton btnEliminarProductos;
+    public javax.swing.JButton btnEliminarProveedores;
+    public javax.swing.JButton btnFacturarTPV;
     public javax.swing.JButton btnGuardarCliente;
     public javax.swing.JButton btnGuardarEmpleado;
-    private javax.swing.JButton btnGuardarProveedor;
-    private javax.swing.JButton jButton1;
+    public javax.swing.JButton btnGuardarProveedor;
+    public javax.swing.JButton btnModificaClientes;
+    public javax.swing.JButton btnModificaProveedores;
+    public javax.swing.JButton btnModificarEmpleado;
+    public javax.swing.JButton btnModificarProductos;
+    private javax.swing.JButton btnSalirTPV;
+    public javax.swing.JButton btnVerClientes;
+    public javax.swing.JButton btnVerEmpleado;
+    public javax.swing.JButton btnVerProductos;
+    public javax.swing.JButton btnVerProveedores;
+    public javax.swing.JComboBox comboClientes;
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton16;
-    private javax.swing.JButton jButton17;
-    private javax.swing.JButton jButton18;
-    private javax.swing.JButton jButton19;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton20;
-    private javax.swing.JButton jButton21;
-    private javax.swing.JButton jButton22;
-    private javax.swing.JButton jButton23;
-    private javax.swing.JButton jButton28;
-    private javax.swing.JButton jButton29;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton30;
-    private javax.swing.JButton jButton31;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JComboBox jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1821,7 +1810,6 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JList jList1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
@@ -1840,27 +1828,16 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTable jTable2;
-    private javax.swing.JTable jTable3;
-    private javax.swing.JTable jTable4;
-    private javax.swing.JTable jTable6;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField20;
     private javax.swing.JTextField jTextField21;
     private javax.swing.JTextField jTextField22;
     private javax.swing.JTextField jTextField23;
     private javax.swing.JTextField jTextField24;
     private javax.swing.JTextField jTextField25;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField32;
-    private javax.swing.JTextField jTextField33;
-    private javax.swing.JTextField jTextField35;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
+    private javax.swing.JList listProductos;
     private javax.swing.JMenu menuArchivo;
     public javax.swing.JMenuItem menuClientes;
     public javax.swing.JMenuItem menuConexion;
@@ -1874,39 +1851,51 @@ public class Interfaz extends javax.swing.JFrame {
     public javax.swing.JPanel paneProveedores;
     public javax.swing.JPanel paneTpv;
     public javax.swing.JTabbedPane tabPrincipal;
+    public javax.swing.JTable tablaFacturacion;
+    public javax.swing.JTable tableClientes;
+    public javax.swing.JTable tableEmpleados;
+    public javax.swing.JTable tableProductos;
+    public javax.swing.JTable tableProveedores;
     public javax.swing.JFormattedTextField textApellido1Cliente;
     public javax.swing.JFormattedTextField textApellido2Cliente;
     public javax.swing.JFormattedTextField textApellidosEmpleado;
+    public javax.swing.JTextField textBusquedaClientes;
+    public javax.swing.JTextField textBusquedaEmpleado;
+    public javax.swing.JTextField textBusquedaProductos;
+    public javax.swing.JTextField textBusquedaProveedores;
     public javax.swing.JFormattedTextField textCPCliente;
     public javax.swing.JFormattedTextField textCPEmpleado;
-    private javax.swing.JFormattedTextField textCPProveedor;
+    public javax.swing.JFormattedTextField textCPProveedor;
     public javax.swing.JFormattedTextField textCod;
     public javax.swing.JFormattedTextField textCodEmpleado;
-    private javax.swing.JFormattedTextField textCodProveedor;
+    public javax.swing.JFormattedTextField textCodProveedor;
+    public javax.swing.JTextField textDescuento;
     public javax.swing.JFormattedTextField textDireccionCliente;
     public javax.swing.JFormattedTextField textDireccionEmpleado;
-    private javax.swing.JFormattedTextField textDireccionProveedor;
+    public javax.swing.JFormattedTextField textDireccionProveedor;
     public javax.swing.JFormattedTextField textDniCliente;
     public javax.swing.JFormattedTextField textDniEmpleado;
     public javax.swing.JFormattedTextField textEmailCliente;
     public javax.swing.JFormattedTextField textEmailEmpleado;
-    private javax.swing.JFormattedTextField textEmailProveedor;
+    public javax.swing.JFormattedTextField textEmailProveedor;
     public javax.swing.JFormattedTextField textFe_NatoCliente;
     public javax.swing.JFormattedTextField textFechaAltaEmpleado;
-    private javax.swing.JFormattedTextField textNifProveedor;
+    public javax.swing.JFormattedTextField textNifProveedor;
     public javax.swing.JFormattedTextField textNombreCliente;
     public javax.swing.JFormattedTextField textNombreEmpleado;
-    private javax.swing.JFormattedTextField textNombreProveedor;
+    public javax.swing.JFormattedTextField textNombreProveedor;
+    public javax.swing.JTextField textNumeroFactura;
     public javax.swing.JFormattedTextField textPoblacionCliente;
     public javax.swing.JFormattedTextField textPoblacionEmpleado;
-    private javax.swing.JFormattedTextField textPoblacionProveedor;
+    public javax.swing.JFormattedTextField textPoblacionProveedor;
     public javax.swing.JFormattedTextField textProvinciaCliente;
     public javax.swing.JFormattedTextField textProvinciaEmpleado;
-    private javax.swing.JFormattedTextField textProvinciaProveedor;
+    public javax.swing.JFormattedTextField textProvinciaProveedor;
     public javax.swing.JFormattedTextField textTelefono2Cliente;
     public javax.swing.JFormattedTextField textTelefonoCliente;
     public javax.swing.JFormattedTextField textTelefonoEmpleado;
-    private javax.swing.JFormattedTextField textTelefonoProveedor;
-    private javax.swing.JFormattedTextField textWebProveedor;
+    public javax.swing.JFormattedTextField textTelefonoProveedor;
+    public javax.swing.JTextField textTotla;
+    public javax.swing.JFormattedTextField textWebProveedor;
     // End of variables declaration//GEN-END:variables
 }
