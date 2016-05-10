@@ -10,5 +10,7 @@ package Modelo;
  * @author Usuario
  */
 public class Modelo_CLI extends ConexionBD{
-    
+    public void hola(){
+        
+    }
 }
