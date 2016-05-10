@@ -220,7 +220,7 @@ public class Interfaz extends javax.swing.JFrame {
         textApellidosFacturacionEmpleado = new javax.swing.JTextField();
         jLabel81 = new javax.swing.JLabel();
         dateFacturaEmpleado = new com.toedter.calendar.JDateChooser();
-        btnFacturaCliente1 = new javax.swing.JButton();
+        btnFacturaEmpleado = new javax.swing.JButton();
         DiaFacturaCliente = new javax.swing.JDialog();
         jPanel9 = new javax.swing.JPanel();
         jLabel74 = new javax.swing.JLabel();
@@ -283,16 +283,16 @@ public class Interfaz extends javax.swing.JFrame {
         btnAniadeProveedores = new javax.swing.JButton();
         btnVerProveedores = new javax.swing.JButton();
         Menu = new javax.swing.JMenuBar();
-        menuListados = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        jMenuItem4 = new javax.swing.JMenuItem();
         menuArchivo = new javax.swing.JMenu();
-        menuPrecio = new javax.swing.JMenuItem();
-        menuFacturas = new javax.swing.JMenuItem();
-        menuEmpleado = new javax.swing.JMenuItem();
-        menuClientes = new javax.swing.JMenuItem();
+        menuEmpresa = new javax.swing.JMenuItem();
+        menuIncPrecio = new javax.swing.JMenuItem();
+        menuAdminEmp = new javax.swing.JMenuItem();
+        menuSalir = new javax.swing.JMenuItem();
+        menuListados = new javax.swing.JMenu();
+        menuLisPrecio = new javax.swing.JMenuItem();
+        menuLisFacturas = new javax.swing.JMenuItem();
+        menuLisEmpleado = new javax.swing.JMenuItem();
+        menuLisClientes = new javax.swing.JMenuItem();
         Menuconf = new javax.swing.JMenu();
         menuConexion = new javax.swing.JMenuItem();
 
@@ -1708,7 +1708,7 @@ public class Interfaz extends javax.swing.JFrame {
 
         jLabel81.setText("Fecha:");
 
-        btnFacturaCliente1.setText("Consultar");
+        btnFacturaEmpleado.setText("Consultar");
 
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
         jPanel10.setLayout(jPanel10Layout);
@@ -1717,7 +1717,7 @@ public class Interfaz extends javax.swing.JFrame {
             .addGroup(jPanel10Layout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnFacturaCliente1)
+                    .addComponent(btnFacturaEmpleado)
                     .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(jLabel78)
                         .addGroup(jPanel10Layout.createSequentialGroup()
@@ -1751,7 +1751,7 @@ public class Interfaz extends javax.swing.JFrame {
                         .addComponent(jLabel81))
                     .addComponent(dateFacturaEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnFacturaCliente1)
+                .addComponent(btnFacturaEmpleado)
                 .addGap(25, 25, 25))
         );
 
@@ -2298,37 +2298,37 @@ public class Interfaz extends javax.swing.JFrame {
 
         tabPrincipal.addTab("Proveedores", paneProveedores);
 
-        menuListados.setText("Archivo");
+        menuArchivo.setText("Archivo");
 
-        jMenuItem1.setText("Datos de la empresa");
-        menuListados.add(jMenuItem1);
+        menuEmpresa.setText("Datos de la empresa");
+        menuArchivo.add(menuEmpresa);
 
-        jMenuItem2.setText("Incremento de precio");
-        menuListados.add(jMenuItem2);
+        menuIncPrecio.setText("Incremento de precio");
+        menuArchivo.add(menuIncPrecio);
 
-        jMenuItem3.setText("Administracion Empleados");
-        menuListados.add(jMenuItem3);
+        menuAdminEmp.setText("Administracion Empleados");
+        menuArchivo.add(menuAdminEmp);
 
-        jMenuItem4.setText("Salir");
-        menuListados.add(jMenuItem4);
-
-        Menu.add(menuListados);
-
-        menuArchivo.setText("Listados");
-
-        menuPrecio.setText("Lista de Precios");
-        menuArchivo.add(menuPrecio);
-
-        menuFacturas.setText("Listado de facturas");
-        menuArchivo.add(menuFacturas);
-
-        menuEmpleado.setText("Facturacion por empleado");
-        menuArchivo.add(menuEmpleado);
-
-        menuClientes.setText("Facturacion por clientes");
-        menuArchivo.add(menuClientes);
+        menuSalir.setText("Salir");
+        menuArchivo.add(menuSalir);
 
         Menu.add(menuArchivo);
+
+        menuListados.setText("Listados");
+
+        menuLisPrecio.setText("Lista de Precios");
+        menuListados.add(menuLisPrecio);
+
+        menuLisFacturas.setText("Listado de facturas");
+        menuListados.add(menuLisFacturas);
+
+        menuLisEmpleado.setText("Facturacion por empleado");
+        menuListados.add(menuLisEmpleado);
+
+        menuLisClientes.setText("Facturacion por clientes");
+        menuListados.add(menuLisClientes);
+
+        Menu.add(menuListados);
 
         Menuconf.setText("Configuración");
 
@@ -2430,7 +2430,7 @@ public class Interfaz extends javax.swing.JFrame {
     public javax.swing.JButton btnEliminarProveedores;
     public javax.swing.JButton btnFactura;
     public javax.swing.JButton btnFacturaCliente;
-    public javax.swing.JButton btnFacturaCliente1;
+    public javax.swing.JButton btnFacturaEmpleado;
     public javax.swing.JButton btnFacturaEmpresa;
     public javax.swing.JButton btnFacturarTPV;
     public javax.swing.JButton btnGuardarCliente;
@@ -2545,10 +2545,6 @@ public class Interfaz extends javax.swing.JFrame {
     public javax.swing.JLabel jLabel85;
     public javax.swing.JLabel jLabel86;
     public javax.swing.JLabel jLabel9;
-    public javax.swing.JMenuItem jMenuItem1;
-    public javax.swing.JMenuItem jMenuItem2;
-    public javax.swing.JMenuItem jMenuItem3;
-    public javax.swing.JMenuItem jMenuItem4;
     public javax.swing.JPanel jPanel1;
     public javax.swing.JPanel jPanel10;
     public javax.swing.JPanel jPanel11;
@@ -2571,13 +2567,17 @@ public class Interfaz extends javax.swing.JFrame {
     public javax.swing.JScrollPane jScrollPane9;
     public javax.swing.JTable jTable1;
     public javax.swing.JList listProductos;
+    public javax.swing.JMenuItem menuAdminEmp;
     public javax.swing.JMenu menuArchivo;
-    public javax.swing.JMenuItem menuClientes;
     public javax.swing.JMenuItem menuConexion;
-    public javax.swing.JMenuItem menuEmpleado;
-    public javax.swing.JMenuItem menuFacturas;
+    public javax.swing.JMenuItem menuEmpresa;
+    public javax.swing.JMenuItem menuIncPrecio;
+    public javax.swing.JMenuItem menuLisClientes;
+    public javax.swing.JMenuItem menuLisEmpleado;
+    public javax.swing.JMenuItem menuLisFacturas;
+    public javax.swing.JMenuItem menuLisPrecio;
     public javax.swing.JMenu menuListados;
-    public javax.swing.JMenuItem menuPrecio;
+    public javax.swing.JMenuItem menuSalir;
     public javax.swing.JPanel paneClientes;
     public javax.swing.JPanel paneEmpleados;
     public javax.swing.JPanel paneProductos;

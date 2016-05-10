@@ -2141,7 +2141,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="btnFacturaCliente1" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnFacturaEmpleado" min="-2" max="-2" attributes="0"/>
                           <Group type="103" alignment="1" groupAlignment="0" attributes="0">
                               <Component id="jLabel78" min="-2" max="-2" attributes="0"/>
                               <Group type="102" attributes="0">
@@ -2186,7 +2186,7 @@
                           <Component id="dateFacturaEmpleado" alignment="1" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
-                      <Component id="btnFacturaCliente1" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnFacturaEmpleado" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -2219,7 +2219,7 @@
             </Component>
             <Component class="com.toedter.calendar.JDateChooser" name="dateFacturaEmpleado">
             </Component>
-            <Component class="javax.swing.JButton" name="btnFacturaCliente1">
+            <Component class="javax.swing.JButton" name="btnFacturaEmpleado">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Consultar"/>
               </Properties>
@@ -2341,39 +2341,39 @@
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
       </AuxValues>
       <SubComponents>
-        <Menu class="javax.swing.JMenu" name="menuListados">
+        <Menu class="javax.swing.JMenu" name="menuArchivo">
           <Properties>
             <Property name="text" type="java.lang.String" value="Archivo"/>
           </Properties>
           <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem1">
+            <MenuItem class="javax.swing.JMenuItem" name="menuEmpresa">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Datos de la empresa"/>
               </Properties>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem2">
+            <MenuItem class="javax.swing.JMenuItem" name="menuIncPrecio">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Incremento de precio"/>
               </Properties>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem3">
+            <MenuItem class="javax.swing.JMenuItem" name="menuAdminEmp">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Administracion Empleados"/>
               </Properties>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem4">
+            <MenuItem class="javax.swing.JMenuItem" name="menuSalir">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Salir"/>
               </Properties>
             </MenuItem>
           </SubComponents>
         </Menu>
-        <Menu class="javax.swing.JMenu" name="menuArchivo">
+        <Menu class="javax.swing.JMenu" name="menuListados">
           <Properties>
             <Property name="text" type="java.lang.String" value="Listados"/>
           </Properties>
           <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="menuPrecio">
+            <MenuItem class="javax.swing.JMenuItem" name="menuLisPrecio">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Lista de Precios"/>
               </Properties>
@@ -2381,7 +2381,7 @@
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
               </AuxValues>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="menuFacturas">
+            <MenuItem class="javax.swing.JMenuItem" name="menuLisFacturas">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Listado de facturas"/>
               </Properties>
@@ -2389,7 +2389,7 @@
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
               </AuxValues>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="menuEmpleado">
+            <MenuItem class="javax.swing.JMenuItem" name="menuLisEmpleado">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Facturacion por empleado"/>
               </Properties>
@@ -2397,7 +2397,7 @@
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
               </AuxValues>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="menuClientes">
+            <MenuItem class="javax.swing.JMenuItem" name="menuLisClientes">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Facturacion por clientes"/>
               </Properties>
