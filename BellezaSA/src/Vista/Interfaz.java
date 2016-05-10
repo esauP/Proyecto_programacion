@@ -297,6 +297,7 @@ public class Interfaz extends javax.swing.JFrame {
         menuConexion = new javax.swing.JMenuItem();
 
         DiaConfBd.setTitle("Configuracion");
+        DiaConfBd.setResizable(false);
 
         jLabel1.setText("IP:");
 
@@ -354,6 +355,7 @@ public class Interfaz extends javax.swing.JFrame {
         );
 
         DiaFactura.setTitle("Factura");
+        DiaFactura.setResizable(false);
 
         jLabel28.setForeground(new java.awt.Color(102, 153, 255));
         jLabel28.setText("Código Factura:");
@@ -495,6 +497,7 @@ public class Interfaz extends javax.swing.JFrame {
         );
 
         DiaAñadirCLi.setTitle("Clientes");
+        DiaAñadirCLi.setResizable(false);
 
         jPanel1.setLayout(new java.awt.GridBagLayout());
 
@@ -730,7 +733,7 @@ public class Interfaz extends javax.swing.JFrame {
         gridBagConstraints.gridheight = 2;
         gridBagConstraints.ipadx = 98;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(18, 1, 0, 228);
+        gridBagConstraints.insets = new java.awt.Insets(18, 1, 3, 228);
         jPanel1.add(textCPCliente, gridBagConstraints);
 
         jLabel46.setText("Observaciones:");
@@ -785,10 +788,11 @@ public class Interfaz extends javax.swing.JFrame {
         );
         DiaAñadirCLiLayout.setVerticalGroup(
             DiaAñadirCLiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 545, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 550, Short.MAX_VALUE)
         );
 
         DiaAñadirEmp.setTitle("Empleados");
+        DiaAñadirEmp.setResizable(false);
         DiaAñadirEmp.getContentPane().setLayout(new java.awt.GridBagLayout());
 
         jPanel2.setMaximumSize(new java.awt.Dimension(2147483647, 2147483647));
@@ -941,6 +945,7 @@ public class Interfaz extends javax.swing.JFrame {
         DiaAñadirEmp.getContentPane().add(jPanel2, gridBagConstraints);
 
         DiaAñadirPro.setTitle("Productos");
+        DiaAñadirPro.setResizable(false);
 
         jPanel5.setLayout(new java.awt.GridBagLayout());
 
@@ -1144,6 +1149,7 @@ public class Interfaz extends javax.swing.JFrame {
 
         DiaAñadirProve.setTitle("Proveedores");
         DiaAñadirProve.setMinimumSize(new java.awt.Dimension(1034, 268));
+        DiaAñadirProve.setResizable(false);
 
         jPanel3.setMinimumSize(new java.awt.Dimension(891, 545));
         jPanel3.setName("Proveedores"); // NOI18N
@@ -1361,6 +1367,7 @@ public class Interfaz extends javax.swing.JFrame {
         );
 
         DiaDatosEmpresa.setTitle("Datos de la empresa");
+        DiaDatosEmpresa.setResizable(false);
 
         jLabel50.setText("<html><strong>Introduzca los datos relativos a su empresa. Presione guardar para guardar los<br/>cambios y salir para salir.<br>Estos datos de almacenan en su ordenador con el unico fin de dar un correcto <br/>\nformato a sus facturas</strong></html>");
 
@@ -1482,6 +1489,7 @@ public class Interfaz extends javax.swing.JFrame {
         );
 
         DiaIncrementoPrecios.setTitle("Incrementar Precios");
+        DiaIncrementoPrecios.setResizable(false);
 
         jPanel6.setLayout(new java.awt.GridBagLayout());
 
@@ -1559,6 +1567,7 @@ public class Interfaz extends javax.swing.JFrame {
         );
 
         DiaAdministracionEmpleados.setTitle("Administracion de Empleados");
+        DiaAdministracionEmpleados.setResizable(false);
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -1602,6 +1611,7 @@ public class Interfaz extends javax.swing.JFrame {
         );
 
         DiaListaPrecios.setTitle("Listado de Precios");
+        DiaListaPrecios.setResizable(false);
         DiaListaPrecios.getContentPane().setLayout(new java.awt.GridBagLayout());
 
         jLabel83.setText("Lista los precios de todos los productos y servicios:");
@@ -1642,6 +1652,7 @@ public class Interfaz extends javax.swing.JFrame {
         DiaListaPrecios.getContentPane().add(jPanel8, new java.awt.GridBagConstraints());
 
         DiaListaFacturas.setTitle("Listado de Facturas");
+        DiaListaFacturas.setResizable(false);
         DiaListaFacturas.getContentPane().setLayout(new java.awt.GridBagLayout());
 
         jLabel82.setText("Lista las facturas de la empresa desde una fecha concreta:");
@@ -1686,17 +1697,12 @@ public class Interfaz extends javax.swing.JFrame {
         DiaListaFacturas.getContentPane().add(jPanel11, gridBagConstraints);
 
         DiaFacturaEmpleado.setTitle("Facturación de Empleados");
+        DiaFacturaEmpleado.setResizable(false);
         DiaFacturaEmpleado.getContentPane().setLayout(new java.awt.GridBagLayout());
 
         jLabel78.setText("Consulta la Facturación de un empleado desde una fecha concreta:");
 
         jLabel79.setText("Nombre:");
-
-        textNombreFacturacionEmpleado.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textNombreFacturacionEmpleadoActionPerformed(evt);
-            }
-        });
 
         jLabel80.setText("Apellidos:");
 
@@ -1756,17 +1762,12 @@ public class Interfaz extends javax.swing.JFrame {
         DiaFacturaEmpleado.getContentPane().add(jPanel10, gridBagConstraints);
 
         DiaFacturaCliente.setTitle("Facturación de Cliente");
+        DiaFacturaCliente.setResizable(false);
         DiaFacturaCliente.getContentPane().setLayout(new java.awt.GridBagLayout());
 
         jLabel74.setText("Consulta la Facturación de un cliente desde una fecha concreta:");
 
         jLabel75.setText("Nombre:");
-
-        textNombreFacturacionCliente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textNombreFacturacionClienteActionPerformed(evt);
-            }
-        });
 
         jLabel76.setText("Apellidos:");
 
@@ -2160,12 +2161,6 @@ public class Interfaz extends javax.swing.JFrame {
         gridBagConstraints.weighty = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(35, 42, 33, 41);
         paneEmpleados.add(jScrollPane5, gridBagConstraints);
-
-        textBusquedaEmpleado.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textBusquedaEmpleadoActionPerformed(evt);
-            }
-        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 2;
@@ -2359,18 +2354,6 @@ public class Interfaz extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void textBusquedaEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textBusquedaEmpleadoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textBusquedaEmpleadoActionPerformed
-
-    private void textNombreFacturacionClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textNombreFacturacionClienteActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textNombreFacturacionClienteActionPerformed
-
-    private void textNombreFacturacionEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textNombreFacturacionEmpleadoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textNombreFacturacionEmpleadoActionPerformed
 
     /**
      * @param args the command line arguments
