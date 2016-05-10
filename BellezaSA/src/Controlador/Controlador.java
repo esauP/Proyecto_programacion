@@ -145,7 +145,7 @@ public class Controlador implements ActionListener, MouseListener {
         this.vista.menuConexion.setActionCommand("AbrirDiaConf");
         this.vista.menuConexion.addActionListener(this);
         //Menu Archivo
-        this.vista.menuIncPrecio.setActionCommand("AbriDiaIncre");
+        this.vista.menuIncPrecio.setActionCommand("AbrirDiaIncre");
         this.vista.menuIncPrecio.addActionListener(this);
         this.vista.menuEmpresa.setActionCommand("AbrirDiaEmpresa");
         this.vista.menuEmpresa.addActionListener(this);
@@ -299,6 +299,7 @@ public class Controlador implements ActionListener, MouseListener {
                 int xe = (int) (Toolkit.getDefaultToolkit().getScreenSize().getWidth() / 2 - this.vista.DiaDatosEmpresa.getWidth() / 2);
                 int ye = (int) (Toolkit.getDefaultToolkit().getScreenSize().getHeight() / 2 - this.vista.DiaDatosEmpresa.getHeight() / 2);
                 this.vista.DiaDatosEmpresa.setLocation(xe, ye);
+                this.vista.DiaDatosEmpresa.setVisible(true);
                 break;
             // Cierre del control del Menu item Datos de la Empresa
             // Incio del control del Menu item Incremento de Precio
@@ -307,6 +308,7 @@ public class Controlador implements ActionListener, MouseListener {
                 int xp = (int) (Toolkit.getDefaultToolkit().getScreenSize().getWidth() / 2 - this.vista.DiaIncrementoPrecios.getWidth() / 2);
                 int yp = (int) (Toolkit.getDefaultToolkit().getScreenSize().getHeight() / 2 - this.vista.DiaIncrementoPrecios.getHeight() / 2);
                 this.vista.DiaIncrementoPrecios.setLocation(xp, yp);
+                this.vista.DiaIncrementoPrecios.setVisible(true);
                 break;
             // Cierre del control del Menu item Incremento de precio
             // Incio del control del Menu item Administracion de empleados
@@ -315,14 +317,16 @@ public class Controlador implements ActionListener, MouseListener {
                 int xa = (int) (Toolkit.getDefaultToolkit().getScreenSize().getWidth() / 2 - this.vista.DiaAdministracionEmpleados.getWidth() / 2);
                 int ya = (int) (Toolkit.getDefaultToolkit().getScreenSize().getHeight() / 2 - this.vista.DiaAdministracionEmpleados.getHeight() / 2);
                 this.vista.DiaAdministracionEmpleados.setLocation(xa, ya);
+                this.vista.DiaAdministracionEmpleados.setVisible(true);
                 break;
             // Cierre del control del Menu item Administracion de empleados
             // Incio del control del Menu item Listado de precios
             case AbrirLisPrecio:
-                this.vista.DiaAdministracionEmpleados.setSize(360, 230);
+                this.vista.DiaListaPrecios.setSize(360, 230);
                 int xls = (int) (Toolkit.getDefaultToolkit().getScreenSize().getWidth() / 2 - this.vista.DiaListaPrecios.getWidth() / 2);
                 int yls = (int) (Toolkit.getDefaultToolkit().getScreenSize().getHeight() / 2 - this.vista.DiaListaPrecios.getHeight() / 2);
-                this.vista.DiaAdministracionEmpleados.setLocation(xls, yls);
+                this.vista.DiaListaPrecios.setLocation(xls, yls);
+                this.vista.DiaListaPrecios.setVisible(true);
                 break;
             // Cierre del control del Menu item Listado de precios
             // Incio del control del Menu item Administracion de empleados
@@ -330,23 +334,26 @@ public class Controlador implements ActionListener, MouseListener {
                 this.vista.DiaListaFacturas.setSize(360, 230);
                 int xlf = (int) (Toolkit.getDefaultToolkit().getScreenSize().getWidth() / 2 - this.vista.DiaListaFacturas.getWidth() / 2);
                 int ylf = (int) (Toolkit.getDefaultToolkit().getScreenSize().getHeight() / 2 - this.vista.DiaListaFacturas.getHeight() / 2);
-                this.vista.DiaAdministracionEmpleados.setLocation(xlf, ylf);
+                this.vista.DiaListaFacturas.setLocation(xlf, ylf);
+                this.vista.DiaListaFacturas.setVisible(true);
                 break;
             // Cierre del control del Menu item Administracion de empleados
-                  // Incio del control del Menu item Administracion de empleados
+            // Incio del control del Menu item Administracion de empleados
             case AbrirLisFacCli:
                 this.vista.DiaFacturaCliente.setSize(360, 230);
                 int xfc = (int) (Toolkit.getDefaultToolkit().getScreenSize().getWidth() / 2 - this.vista.DiaFacturaCliente.getWidth() / 2);
                 int yfc = (int) (Toolkit.getDefaultToolkit().getScreenSize().getHeight() / 2 - this.vista.DiaFacturaCliente.getHeight() / 2);
                 this.vista.DiaFacturaCliente.setLocation(xfc, yfc);
+                this.vista.DiaFacturaCliente.setVisible(true);
                 break;
             // Cierre del control del Menu item Administracion de empleados
-                  // Incio del control del Menu item Administracion de empleados
+            // Incio del control del Menu item Administracion de empleados
             case AbrirLisFacEmple:
                 this.vista.DiaFacturaEmpleado.setSize(360, 230);
                 int xfe = (int) (Toolkit.getDefaultToolkit().getScreenSize().getWidth() / 2 - this.vista.DiaFacturaEmpleado.getWidth() / 2);
                 int yfe = (int) (Toolkit.getDefaultToolkit().getScreenSize().getHeight() / 2 - this.vista.DiaFacturaEmpleado.getHeight() / 2);
                 this.vista.DiaFacturaEmpleado.setLocation(xfe, yfe);
+                this.vista.DiaFacturaEmpleado.setVisible(true);
                 break;
             // Cierre del control del Menu item Administracion de empleados
 
