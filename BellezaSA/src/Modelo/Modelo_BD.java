@@ -16,9 +16,9 @@ import java.util.StringTokenizer;
  *
  * @author Belleza S.A
  */
-public class Modelo extends ConexionBD {
+public class Modelo_BD extends ConexionBD {
 
-    public Modelo() {
+    public Modelo_BD() {
 
     }
 

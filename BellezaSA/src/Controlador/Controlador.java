@@ -5,7 +5,12 @@
  */
 package Controlador;
 
-import Modelo.Modelo;
+import Modelo.Modelo_BD;
+import Modelo.Modelo_CLI;
+import Modelo.Modelo_EMP;
+import Modelo.Modelo_PROD;
+import Modelo.Modelo_PROV;
+import Modelo.Modelo_TPV;
 import Vista.Interfaz;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
@@ -27,7 +32,12 @@ import javax.swing.UnsupportedLookAndFeelException;
 public class Controlador implements ActionListener, MouseListener {
 
     Interfaz vista;
-    Modelo mo = new Modelo();
+    Modelo_BD mo_bd = new Modelo_BD();
+    Modelo_TPV mo_tp = new Modelo_TPV();
+    Modelo_CLI mo_cl = new Modelo_CLI();
+    Modelo_EMP mo_em = new Modelo_EMP();
+    Modelo_PROD mo_prod = new Modelo_PROD();
+    Modelo_PROV mo_prov = new Modelo_PROV();
 
     public Controlador(Interfaz vista) {
 
@@ -141,7 +151,7 @@ public class Controlador implements ActionListener, MouseListener {
                 String[] temp = null;
 
                 try {
-                    temp = this.mo.GetBdconf();
+                    temp = this.mo_bd.GetBdconf();
 
                 } catch (IOException ex) {
                     Logger.getLogger(Controlador.class.getName()).log(Level.SEVERE, null, ex);
@@ -159,7 +169,7 @@ public class Controlador implements ActionListener, MouseListener {
                 usu = this.vista.TxtDiaUsu.getText();
                 pass = this.vista.TxtDiaPass.getText();
                 if (!ip.isEmpty() || !usu.isEmpty() || !pass.isEmpty()) {
-                    this.mo.EscribeBdconf(ip, usu, pass);
+                    this.mo_bd.EscribeBdconf(ip, usu, pass);
                     this.vista.DiaConfBd.dispose();
                 } else {
                     JOptionPane.showMessageDialog(vista, "Debe introducir Datos para poder guardarlos en el fichero de configuracion");
