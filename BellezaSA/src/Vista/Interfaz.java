@@ -56,6 +56,7 @@ public class Interfaz extends javax.swing.JFrame {
         checkBoxFactura = new javax.swing.JCheckBox();
         btnFactura = new javax.swing.JButton();
         btnCancelarFactura = new javax.swing.JButton();
+        jDateChooser1 = new com.toedter.calendar.JDateChooser();
         GrupoBtnPago = new javax.swing.ButtonGroup();
         DiaAñadirCLi = new javax.swing.JDialog();
         jPanel1 = new javax.swing.JPanel();
@@ -335,8 +336,10 @@ public class Interfaz extends javax.swing.JFrame {
                             .addComponent(jLabel28, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(textCodFactura))
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel4Layout.createSequentialGroup()
                                 .addComponent(radioTarjeta)
@@ -368,7 +371,7 @@ public class Interfaz extends javax.swing.JFrame {
                             .addComponent(jLabel35)
                             .addGap(18, 18, 18)
                             .addComponent(checkBoxFactura))))
-                .addContainerGap(88, Short.MAX_VALUE))
+                .addContainerGap(49, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -383,7 +386,8 @@ public class Interfaz extends javax.swing.JFrame {
                     .addComponent(textCodFactura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(radioTarjeta)
-                        .addComponent(radioEfectivo)))
+                        .addComponent(radioEfectivo))
+                    .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(34, 34, 34)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel32)
@@ -1895,6 +1899,7 @@ public class Interfaz extends javax.swing.JFrame {
     public javax.swing.JCheckBox checkBoxFactura;
     public javax.swing.JCheckBox checkBoxProducto;
     public javax.swing.JComboBox comboClientes;
+    public com.toedter.calendar.JDateChooser jDateChooser1;
     public javax.swing.JLabel jLabel1;
     public javax.swing.JLabel jLabel10;
     public javax.swing.JLabel jLabel11;
