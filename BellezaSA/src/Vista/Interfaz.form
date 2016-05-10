@@ -143,10 +143,7 @@
                                   <Component id="textCodFactura" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel29" alignment="0" min="-2" pref="42" max="-2" attributes="0"/>
-                                  <Component id="chooserFactura" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
+                              <Component id="jLabel29" min="-2" pref="42" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
@@ -206,10 +203,7 @@
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="textCodFactura" min="-2" max="-2" attributes="0"/>
-                              <Component id="chooserFactura" min="-2" max="-2" attributes="0"/>
-                          </Group>
+                          <Component id="textCodFactura" min="-2" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="radioTarjeta" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="radioEfectivo" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -269,11 +263,6 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Fecha:"/>
               </Properties>
-            </Component>
-            <Component class="com.toedter.calendar.JDateChooser" name="chooserFactura">
-              <AuxValues>
-                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
-              </AuxValues>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel31">
               <Properties>

@@ -10,5 +10,7 @@ package Modelo;
  * @author Usuario
  */
 public class Modelo_PROD extends ConexionBD{
-    
+    public void prueba(){
+        
+    }
 }
