@@ -41,8 +41,12 @@ public class Controlador implements ActionListener, MouseListener {
 
     public Controlador(Interfaz vista) {
         this.vista = vista;
+        //Asignamos los radioButton a su grupo correspondiente
         this.vista.GrupoBtnPago.add(this.vista.radioEfectivo);
         this.vista.GrupoBtnPago.add(this.vista.radioTarjeta);
+
+        this.vista.GrupoBtnIncrementa.add(this.vista.radioCantidad);
+        this.vista.GrupoBtnIncrementa.add(this.vista.radioPorcentaje);
     }
 
     public enum AccionMVC {
@@ -141,7 +145,7 @@ public class Controlador implements ActionListener, MouseListener {
         this.vista.btnFacturarTPV.setActionCommand("Facturar");
         this.vista.btnFacturarTPV.addActionListener(this);
         //Añadimos la accion de los botones correspondientes al panel Clientes
-        this.vista.btnAniadeClientes.setActionCommand("AñadirCli");
+        this.vista.btnAniadeClientes.setActionCommand("AnyadirCli");
         this.vista.btnAniadeClientes.addActionListener(this);
         this.vista.btnModificaClientes.setActionCommand("ModificarCli");
         this.vista.btnModificaClientes.addActionListener(this);
@@ -181,14 +185,6 @@ public class Controlador implements ActionListener, MouseListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         switch (AccionMVC.valueOf(e.getActionCommand())) {
-            //Comienzo del control del dialogo Añadir Cliente
-            case CliGuardar:
-                this.mo_cl.Insertar();
-                break;
-            case CliCerrar:
-                this.vista.DiaAñadirCLi.dispose();
-                break;
-            //Cierre del control del dialogo Añadir Cliente
 
             //Comienzo del control del Dialogo de configuración de la base de datos
             case AbrirDia:
@@ -228,13 +224,37 @@ public class Controlador implements ActionListener, MouseListener {
                 this.vista.DiaConfBd.dispose();
                 break;
             //Cierre del control del dialogo de configuración de la base de datos
-            // Comienzo del control del dialogo AñadirEmpleados
+            //Comienzo del control del dialogo Añadir Cliente
+            case CliGuardar:
+                this.mo_cl.Insertar();
+                break;
+            case CliCerrar:
+                this.vista.DiaAñadirCLi.dispose();
+                break;
+            //Cierre del control del dialogo Añadir Cliente
+            // Comienzo del control del dialogo Añadir Empleados
             case EmpGuardar:
                 this.mo_em.Insertar();
                 break;
             case EmpCerrar:
                 this.vista.DiaAñadirEmp.dispose();
-            //Cierre del control del dialogo AñadirEmpleados
+            //Cierre del control del dialogo Añadir Empleados
+            //Comienzo del control del dialogo Añadir Productos
+            case ProdGuardar:
+                this.mo_prod.Insertar();
+                break;
+            case ProdCerrar:
+                this.vista.DiaAñadirPro.dispose();
+                break;
+            //Cierre del contrl del dialogo Añadir Productos
+                //Comienzo del control del dialogo Añadir Proveedores
+            case ProvGuardar:
+                this.mo_prov.Insertar();
+                break;
+            case ProvCerrar:
+                this.vista.DiaAñadirProve.dispose();
+                break;
+                //Cierre del control del dialogo Añadir Proveedores
             //Comienzo del control del panel TPV 
             case Salir:
                 System.exit(1);
@@ -250,7 +270,7 @@ public class Controlador implements ActionListener, MouseListener {
             //Cierre del control del panel TPV
             //Comienzo del control del panel del panel Clientes
             case AnyadirCli:
-                this.vista.DiaAñadirCLi.setSize(896, 545);
+                this.vista.DiaAñadirCLi.setSize(900, 570);
                 int xc = (int) (Toolkit.getDefaultToolkit().getScreenSize().getWidth() / 2 - this.vista.DiaAñadirCLi.getWidth() / 2);
                 int yc = (int) (Toolkit.getDefaultToolkit().getScreenSize().getHeight() / 2 - this.vista.DiaAñadirCLi.getHeight() / 2);
                 this.vista.DiaAñadirCLi.setLocation(xc, yc);
@@ -268,8 +288,8 @@ public class Controlador implements ActionListener, MouseListener {
             //Cierre del contrl del panel Clientes
             //Comienzo del control del panel Productos
             case AnyadirProd:
-                this.vista.DiaAñadirPro.setSize(713, 587);
-                 int xpr = (int) (Toolkit.getDefaultToolkit().getScreenSize().getWidth() / 2 - this.vista.DiaAñadirPro.getWidth() / 2);
+                this.vista.DiaAñadirPro.setSize(770, 650);
+                int xpr = (int) (Toolkit.getDefaultToolkit().getScreenSize().getWidth() / 2 - this.vista.DiaAñadirPro.getWidth() / 2);
                 int ypr = (int) (Toolkit.getDefaultToolkit().getScreenSize().getHeight() / 2 - this.vista.DiaAñadirPro.getHeight() / 2);
                 this.vista.DiaAñadirPro.setLocation(xpr, ypr);
                 this.vista.DiaAñadirPro.setVisible(true);
@@ -287,8 +307,8 @@ public class Controlador implements ActionListener, MouseListener {
 
             //Comienzo del control del panel Empleados
             case AnyadirEmp:
-                this.vista.DiaAñadirEmp.setSize(1177, 341);
-                 int xe = (int) (Toolkit.getDefaultToolkit().getScreenSize().getWidth() / 2 - this.vista.DiaAñadirEmp.getWidth() / 2);
+                this.vista.DiaAñadirEmp.setSize(1200, 380);
+                int xe = (int) (Toolkit.getDefaultToolkit().getScreenSize().getWidth() / 2 - this.vista.DiaAñadirEmp.getWidth() / 2);
                 int ye = (int) (Toolkit.getDefaultToolkit().getScreenSize().getHeight() / 2 - this.vista.DiaAñadirEmp.getHeight() / 2);
                 this.vista.DiaAñadirEmp.setLocation(xe, ye);
                 this.vista.DiaAñadirEmp.setVisible(true);
@@ -306,8 +326,8 @@ public class Controlador implements ActionListener, MouseListener {
 
             //Comienzo del contol del panel Proveedores
             case AnyadirProv:
-                this.vista.DiaAñadirProve.setSize(1177, 378);
-                 int xp = (int) (Toolkit.getDefaultToolkit().getScreenSize().getWidth() / 2 - this.vista.DiaAñadirProve.getWidth() / 2);
+                this.vista.DiaAñadirProve.setSize(1177, 380);
+                int xp = (int) (Toolkit.getDefaultToolkit().getScreenSize().getWidth() / 2 - this.vista.DiaAñadirProve.getWidth() / 2);
                 int yp = (int) (Toolkit.getDefaultToolkit().getScreenSize().getHeight() / 2 - this.vista.DiaAñadirProve.getHeight() / 2);
                 this.vista.DiaAñadirProve.setLocation(xp, yp);
                 this.vista.DiaAñadirProve.setVisible(true);
