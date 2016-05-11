@@ -87,7 +87,7 @@ public class Controlador implements ActionListener, MouseListener {
         DiaconfBtnCan,
         //Dialogo Datos Empresa
         DiaEmpreGuardar,
-        DiaEMpreSalir,
+        DiaEmpreSalir,
         //Dialogo Incrementar Precios
         DiaIncIncrementar,
         DiaIncSalir,
@@ -124,7 +124,9 @@ public class Controlador implements ActionListener, MouseListener {
         AnyadirProv,
         ModificarProv,
         ElminarProv,
-        VerProv
+        VerProv,
+        //Panel Facturas
+        VerFac
     }
 
     public void Iniciar() {
@@ -269,6 +271,9 @@ public class Controlador implements ActionListener, MouseListener {
         this.vista.btnEliminarProductos.addActionListener(this);
         this.vista.btnVerProductos.setActionCommand("VerProd");
         this.vista.btnVerProductos.addActionListener(this);
+        //Añadimos la acccion de los botones correspondientes al panel Facturas
+        this.vista.btnDevolucion.setActionCommand("VerFac");
+        this.vista.btnDevolucion.addActionListener(this);
     }
 
     @Override
@@ -301,7 +306,7 @@ public class Controlador implements ActionListener, MouseListener {
             // Cierre del control del Menu item Configuracion de la base de datos
             // Incio del control del Menu item Datos de la Empresa
             case AbrirDiaEmpresa:
-                this.vista.DiaDatosEmpresa.setSize(360, 230);
+                this.vista.DiaDatosEmpresa.setSize(570, 450);
                 int xe = (int) (Toolkit.getDefaultToolkit().getScreenSize().getWidth() / 2 - this.vista.DiaDatosEmpresa.getWidth() / 2);
                 int ye = (int) (Toolkit.getDefaultToolkit().getScreenSize().getHeight() / 2 - this.vista.DiaDatosEmpresa.getHeight() / 2);
                 this.vista.DiaDatosEmpresa.setLocation(xe, ye);
@@ -310,7 +315,7 @@ public class Controlador implements ActionListener, MouseListener {
             // Cierre del control del Menu item Datos de la Empresa
             // Incio del control del Menu item Incremento de Precio
             case AbrirDiaIncre:
-                this.vista.DiaIncrementoPrecios.setSize(360, 230);
+                this.vista.DiaIncrementoPrecios.setSize(590, 300);
                 int xp = (int) (Toolkit.getDefaultToolkit().getScreenSize().getWidth() / 2 - this.vista.DiaIncrementoPrecios.getWidth() / 2);
                 int yp = (int) (Toolkit.getDefaultToolkit().getScreenSize().getHeight() / 2 - this.vista.DiaIncrementoPrecios.getHeight() / 2);
                 this.vista.DiaIncrementoPrecios.setLocation(xp, yp);
@@ -319,7 +324,7 @@ public class Controlador implements ActionListener, MouseListener {
             // Cierre del control del Menu item Incremento de precio
             // Incio del control del Menu item Administracion de empleados
             case AbrirDiaAdmin:
-                this.vista.DiaAdministracionEmpleados.setSize(360, 230);
+                this.vista.DiaAdministracionEmpleados.setSize(570, 330);
                 int xa = (int) (Toolkit.getDefaultToolkit().getScreenSize().getWidth() / 2 - this.vista.DiaAdministracionEmpleados.getWidth() / 2);
                 int ya = (int) (Toolkit.getDefaultToolkit().getScreenSize().getHeight() / 2 - this.vista.DiaAdministracionEmpleados.getHeight() / 2);
                 this.vista.DiaAdministracionEmpleados.setLocation(xa, ya);
@@ -328,7 +333,7 @@ public class Controlador implements ActionListener, MouseListener {
             // Cierre del control del Menu item Administracion de empleados
             // Incio del control del Menu item Listado de precios
             case AbrirLisPrecio:
-                this.vista.DiaListaPrecios.setSize(360, 230);
+                this.vista.DiaListaPrecios.setSize(340, 170);
                 int xls = (int) (Toolkit.getDefaultToolkit().getScreenSize().getWidth() / 2 - this.vista.DiaListaPrecios.getWidth() / 2);
                 int yls = (int) (Toolkit.getDefaultToolkit().getScreenSize().getHeight() / 2 - this.vista.DiaListaPrecios.getHeight() / 2);
                 this.vista.DiaListaPrecios.setLocation(xls, yls);
@@ -337,7 +342,7 @@ public class Controlador implements ActionListener, MouseListener {
             // Cierre del control del Menu item Listado de precios
             // Incio del control del Menu item Administracion de empleados
             case AbrirLisFactura:
-                this.vista.DiaListaFacturas.setSize(360, 230);
+                this.vista.DiaListaFacturas.setSize(370, 140);
                 int xlf = (int) (Toolkit.getDefaultToolkit().getScreenSize().getWidth() / 2 - this.vista.DiaListaFacturas.getWidth() / 2);
                 int ylf = (int) (Toolkit.getDefaultToolkit().getScreenSize().getHeight() / 2 - this.vista.DiaListaFacturas.getHeight() / 2);
                 this.vista.DiaListaFacturas.setLocation(xlf, ylf);
@@ -346,7 +351,7 @@ public class Controlador implements ActionListener, MouseListener {
             // Cierre del control del Menu item Administracion de empleados
             // Incio del control del Menu item Administracion de empleados
             case AbrirLisFacCli:
-                this.vista.DiaFacturaCliente.setSize(360, 230);
+                this.vista.DiaFacturaCliente.setSize(390, 260);
                 int xfc = (int) (Toolkit.getDefaultToolkit().getScreenSize().getWidth() / 2 - this.vista.DiaFacturaCliente.getWidth() / 2);
                 int yfc = (int) (Toolkit.getDefaultToolkit().getScreenSize().getHeight() / 2 - this.vista.DiaFacturaCliente.getHeight() / 2);
                 this.vista.DiaFacturaCliente.setLocation(xfc, yfc);
@@ -355,7 +360,7 @@ public class Controlador implements ActionListener, MouseListener {
             // Cierre del control del Menu item Administracion de empleados
             // Incio del control del Menu item Administracion de empleados
             case AbrirLisFacEmple:
-                this.vista.DiaFacturaEmpleado.setSize(360, 230);
+                this.vista.DiaFacturaEmpleado.setSize(450, 280);
                 int xfe = (int) (Toolkit.getDefaultToolkit().getScreenSize().getWidth() / 2 - this.vista.DiaFacturaEmpleado.getWidth() / 2);
                 int yfe = (int) (Toolkit.getDefaultToolkit().getScreenSize().getHeight() / 2 - this.vista.DiaFacturaEmpleado.getHeight() / 2);
                 this.vista.DiaFacturaEmpleado.setLocation(xfe, yfe);
@@ -420,7 +425,7 @@ public class Controlador implements ActionListener, MouseListener {
             case DiaEmpreGuardar:
 
                 break;
-            case DiaEMpreSalir:
+            case DiaEmpreSalir:
                 this.vista.DiaDatosEmpresa.dispose();
                 break;
             //Cierre del control del dialogo Empresa
@@ -543,6 +548,15 @@ public class Controlador implements ActionListener, MouseListener {
                 this.mo_prov.Buscar();
                 break;
             //Cierre del control del panel Proveedores
+                //Comienzo del control del panel Facturas
+            case VerFac:
+                this.vista.DiaDevolucion.setSize(500, 500);
+                int xdev = (int) (Toolkit.getDefaultToolkit().getScreenSize().getWidth() / 2 - this.vista.DiaDevolucion.getWidth() / 2);
+                int ydev = (int) (Toolkit.getDefaultToolkit().getScreenSize().getHeight() / 2 - this.vista.DiaDevolucion.getHeight() / 2);
+                this.vista.DiaDevolucion.setLocation(xdev, ydev);
+                this.vista.DiaDevolucion.setVisible(true);
+                
+                //Cierre dle control del panel Facturas
 
         }
     }

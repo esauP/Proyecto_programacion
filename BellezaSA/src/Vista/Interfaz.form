@@ -5,6 +5,7 @@
     <Container class="javax.swing.JDialog" name="DiaConfBd">
       <Properties>
         <Property name="title" type="java.lang.String" value="Configuracion"/>
+        <Property name="modal" type="boolean" value="true"/>
         <Property name="resizable" type="boolean" value="false"/>
       </Properties>
       <AuxValues>
@@ -118,6 +119,7 @@
     <Container class="javax.swing.JDialog" name="DiaFactura">
       <Properties>
         <Property name="title" type="java.lang.String" value="Factura"/>
+        <Property name="modal" type="boolean" value="true"/>
         <Property name="resizable" type="boolean" value="false"/>
       </Properties>
       <AuxValues>
@@ -406,6 +408,7 @@
     <Container class="javax.swing.JDialog" name="DiaA&#xf1;adirCLi">
       <Properties>
         <Property name="title" type="java.lang.String" value="Clientes"/>
+        <Property name="modal" type="boolean" value="true"/>
         <Property name="resizable" type="boolean" value="false"/>
       </Properties>
       <AuxValues>
@@ -761,6 +764,7 @@
     <Container class="javax.swing.JDialog" name="DiaA&#xf1;adirEmp">
       <Properties>
         <Property name="title" type="java.lang.String" value="Empleados"/>
+        <Property name="modal" type="boolean" value="true"/>
         <Property name="resizable" type="boolean" value="false"/>
       </Properties>
       <AuxValues>
@@ -1060,6 +1064,7 @@
     <Container class="javax.swing.JDialog" name="DiaA&#xf1;adirPro">
       <Properties>
         <Property name="title" type="java.lang.String" value="Productos"/>
+        <Property name="modal" type="boolean" value="true"/>
         <Property name="resizable" type="boolean" value="false"/>
       </Properties>
       <AuxValues>
@@ -1341,6 +1346,7 @@
         <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[1034, 268]"/>
         </Property>
+        <Property name="modal" type="boolean" value="true"/>
         <Property name="resizable" type="boolean" value="false"/>
       </Properties>
       <AuxValues>
@@ -1612,6 +1618,7 @@
     <Container class="javax.swing.JDialog" name="DiaDatosEmpresa">
       <Properties>
         <Property name="title" type="java.lang.String" value="Datos de la empresa"/>
+        <Property name="modal" type="boolean" value="true"/>
         <Property name="resizable" type="boolean" value="false"/>
       </Properties>
 
@@ -1672,7 +1679,7 @@
                           </Group>
                       </Group>
                   </Group>
-                  <EmptySpace pref="57" max="32767" attributes="0"/>
+                  <EmptySpace pref="54" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -1744,7 +1751,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel64">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Introduzca el NIF oDNI:"/>
+            <Property name="text" type="java.lang.String" value="Introduzca el NIF o DNI:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JFormattedTextField" name="textNifEmpresa">
@@ -1786,7 +1793,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel70">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Tel&#xe9;fono m&#xf3;vi:l"/>
+            <Property name="text" type="java.lang.String" value="Tel&#xe9;fono m&#xf3;vil:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JFormattedTextField" name="textTelefonoEmpresa2">
@@ -1816,6 +1823,7 @@
     <Container class="javax.swing.JDialog" name="DiaIncrementoPrecios">
       <Properties>
         <Property name="title" type="java.lang.String" value="Incrementar Precios"/>
+        <Property name="modal" type="boolean" value="true"/>
         <Property name="resizable" type="boolean" value="false"/>
       </Properties>
 
@@ -1913,6 +1921,7 @@
     <Container class="javax.swing.JDialog" name="DiaAdministracionEmpleados">
       <Properties>
         <Property name="title" type="java.lang.String" value="Administracion de Empleados"/>
+        <Property name="modal" type="boolean" value="true"/>
         <Property name="resizable" type="boolean" value="false"/>
       </Properties>
 
@@ -1979,6 +1988,7 @@
     <Container class="javax.swing.JDialog" name="DiaListaPrecios">
       <Properties>
         <Property name="title" type="java.lang.String" value="Listado de Precios"/>
+        <Property name="modal" type="boolean" value="true"/>
         <Property name="resizable" type="boolean" value="false"/>
       </Properties>
 
@@ -1987,7 +1997,7 @@
         <Container class="javax.swing.JPanel" name="jPanel8">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
-              <GridBagConstraints gridX="-1" gridY="-1" gridWidth="1" gridHeight="1" fill="0" ipadX="0" ipadY="0" insetsTop="0" insetsLeft="0" insetsBottom="0" insetsRight="0" anchor="10" weightX="0.0" weightY="0.0"/>
+              <GridBagConstraints gridX="0" gridY="0" gridWidth="1" gridHeight="1" fill="0" ipadX="0" ipadY="0" insetsTop="0" insetsLeft="0" insetsBottom="0" insetsRight="0" anchor="10" weightX="0.0" weightY="0.0"/>
             </Constraint>
           </Constraints>
 
@@ -1999,8 +2009,8 @@
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jLabel86" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                              <Component id="datePrecios" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="datePrecios" min="-2" pref="104" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
                               <Component id="btnPrecios" min="-2" max="-2" attributes="0"/>
                           </Group>
@@ -2051,6 +2061,7 @@
     <Container class="javax.swing.JDialog" name="DiaListaFacturas">
       <Properties>
         <Property name="title" type="java.lang.String" value="Listado de Facturas"/>
+        <Property name="modal" type="boolean" value="true"/>
         <Property name="resizable" type="boolean" value="false"/>
       </Properties>
 
@@ -2072,7 +2083,7 @@
                           <Group type="102" attributes="0">
                               <Component id="jLabel85" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                              <Component id="dateFacturacion" min="-2" max="-2" attributes="0"/>
+                              <Component id="dateFacturacion" min="-2" pref="105" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
                               <Component id="btnFacturaEmpresa" min="-2" max="-2" attributes="0"/>
                           </Group>
@@ -2123,6 +2134,7 @@
     <Container class="javax.swing.JDialog" name="DiaFacturaEmpleado">
       <Properties>
         <Property name="title" type="java.lang.String" value="Facturaci&#xf3;n de Empleados"/>
+        <Property name="modal" type="boolean" value="true"/>
         <Property name="resizable" type="boolean" value="false"/>
       </Properties>
 
@@ -2153,8 +2165,8 @@
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="textNombreFacturacionEmpleado" alignment="0" min="-2" pref="288" max="-2" attributes="0"/>
-                                      <Component id="dateFacturaEmpleado" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="textApellidosFacturacionEmpleado" alignment="0" min="-2" pref="288" max="-2" attributes="0"/>
+                                      <Component id="dateFacturaEmpleado" alignment="0" min="-2" pref="104" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -2231,6 +2243,7 @@
     <Container class="javax.swing.JDialog" name="DiaFacturaCliente">
       <Properties>
         <Property name="title" type="java.lang.String" value="Facturaci&#xf3;n de Cliente"/>
+        <Property name="modal" type="boolean" value="true"/>
         <Property name="resizable" type="boolean" value="false"/>
       </Properties>
 
@@ -2261,8 +2274,8 @@
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="textNombreFacturacionCliente" min="-2" pref="288" max="-2" attributes="0"/>
-                                      <Component id="dateFacturaCliente" min="-2" max="-2" attributes="0"/>
                                       <Component id="textApellidosFacturacionCliente" min="-2" pref="288" max="-2" attributes="0"/>
+                                      <Component id="dateFacturaCliente" alignment="0" min="-2" pref="104" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -2337,6 +2350,9 @@
       </SubComponents>
     </Container>
     <Container class="javax.swing.JDialog" name="DiaDevolucion">
+      <Properties>
+        <Property name="modal" type="boolean" value="true"/>
+      </Properties>
 
       <Layout>
         <DimensionLayout dim="0">
