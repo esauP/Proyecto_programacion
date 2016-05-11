@@ -5,24 +5,32 @@
  */
 package Controlador;
 
+import Modelo.Modelo_EMP;
 import Vista.Interfaz;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseListener;
 import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
 /**
  *
- * @author Usuario
+ * @author ESAÚ || MACARENA || SAMUEL
  */
-public class Controlador_EMP extends Controlador{
+public class Controlador_EMP extends Controlador implements ActionListener, MouseListener {
+
+    Modelo_EMP mo_em = new Modelo_EMP();
 
     public Controlador_EMP(Interfaz vista) {
         super(vista);
     }
-     public enum AccionMVC {
- //Panel Empleados
+
+    public enum AccionMVC {
+
+        //Panel Empleados
+
         AnyadirEmp,
         ModificarEmp,
         ElminarEmp,
@@ -33,29 +41,29 @@ public class Controlador_EMP extends Controlador{
     }
 
     public void Iniciar() {
-        try {
-            UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
-            SwingUtilities.updateComponentTreeUI(vista);
-            vista.setVisible(true);
-        } catch (UnsupportedLookAndFeelException ex) {
-        } catch (ClassNotFoundException ex) {
-        } catch (InstantiationException ex) {
-        } catch (IllegalAccessException ex) {
-        }
+//        try {
+//            UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
+//            SwingUtilities.updateComponentTreeUI(vista);
+//            vista.setVisible(true);
+//        } catch (UnsupportedLookAndFeelException ex) {
+//        } catch (ClassNotFoundException ex) {
+//        } catch (InstantiationException ex) {
+//        } catch (IllegalAccessException ex) {
+//        }
         //Añadimos la accion de los botones correspondientes al panel Empleados
-        this.vista.btnAniadeEmpleado.setActionCommand("AnyadirEmp");
-        this.vista.btnAniadeEmpleado.addActionListener(this);
-        this.vista.btnModificarEmpleado.setActionCommand("ModificarEmp");
-        this.vista.btnModificarEmpleado.addActionListener(this);
-        this.vista.btnEliminarEmpleado.setActionCommand("EliminarEmp");
-        this.vista.btnEliminarEmpleado.addActionListener(this);
-        this.vista.btnVerEmpleado.setActionCommand("VerEmp");
-        this.vista.btnVerEmpleado.addActionListener(this);
+        super.vista.btnAniadeEmpleado.setActionCommand("AnyadirEmp");
+        super.vista.btnAniadeEmpleado.addActionListener(this);
+        super.vista.btnModificarEmpleado.setActionCommand("ModificarEmp");
+        super.vista.btnModificarEmpleado.addActionListener(this);
+        super.vista.btnEliminarEmpleado.setActionCommand("EliminarEmp");
+        super.vista.btnEliminarEmpleado.addActionListener(this);
+        super.vista.btnVerEmpleado.setActionCommand("VerEmp");
+        super.vista.btnVerEmpleado.addActionListener(this);
         // Añadimos la accion de los botones correspondientes al dialogo AñadirEmpleados
-        this.vista.btnGuardarEmpleado.setActionCommand("EmpGuardar");
-        this.vista.btnGuardarEmpleado.addActionListener(this);
-        this.vista.btnCancelarEmpleado.setActionCommand("EmpCerrar");
-        this.vista.btnCancelarEmpleado.addActionListener(this);
+        super.vista.btnGuardarEmpleado.setActionCommand("EmpGuardar");
+        super.vista.btnGuardarEmpleado.addActionListener(this);
+        super.vista.btnCancelarEmpleado.setActionCommand("EmpCerrar");
+        super.vista.btnCancelarEmpleado.addActionListener(this);
     }
 
     @Override
@@ -64,13 +72,13 @@ public class Controlador_EMP extends Controlador{
             /**
              *
              */
- //Comienzo del control del panel Empleados
+            //Comienzo del control del panel Empleados
             case AnyadirEmp:
-                this.vista.DiaAñadirEmp.setSize(1200, 380);
-                int xem = (int) (Toolkit.getDefaultToolkit().getScreenSize().getWidth() / 2 - this.vista.DiaAñadirEmp.getWidth() / 2);
-                int yem = (int) (Toolkit.getDefaultToolkit().getScreenSize().getHeight() / 2 - this.vista.DiaAñadirEmp.getHeight() / 2);
-                this.vista.DiaAñadirEmp.setLocation(xem, yem);
-                this.vista.DiaAñadirEmp.setVisible(true);
+                super.vista.DiaAñadirEmp.setSize(1200, 380);
+                int xem = (int) (Toolkit.getDefaultToolkit().getScreenSize().getWidth() / 2 - super.vista.DiaAñadirEmp.getWidth() / 2);
+                int yem = (int) (Toolkit.getDefaultToolkit().getScreenSize().getHeight() / 2 - super.vista.DiaAñadirEmp.getHeight() / 2);
+                super.vista.DiaAñadirEmp.setLocation(xem, yem);
+                super.vista.DiaAñadirEmp.setVisible(true);
                 break;
             case ModificarEmp:
                 this.mo_em.Modificar();
@@ -82,12 +90,12 @@ public class Controlador_EMP extends Controlador{
                 this.mo_em.Buscar();
                 break;
                 //Cierre del control del panel Empleados
-                // Comienzo del control del dialogo Añadir Empleados
+            // Comienzo del control del dialogo Añadir Empleados
             case EmpGuardar:
                 this.mo_em.Insertar();
                 break;
             case EmpCerrar:
-                this.vista.DiaAñadirEmp.dispose();
+                super.vista.DiaAñadirEmp.dispose();
             //Cierre del control del dialogo Añadir Empleados
         }
     }

@@ -11,14 +11,11 @@ import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseListener;
-import javax.swing.SwingUtilities;
-import javax.swing.UIManager;
-import javax.swing.UnsupportedLookAndFeelException;
 import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author Usuario
+ * @author  ESAÚ || MACARENA || SAMUEL
  */
 public class Controlador_TPV extends Controlador implements ActionListener, MouseListener {
 
@@ -42,32 +39,31 @@ public class Controlador_TPV extends Controlador implements ActionListener, Mous
     }
 
     public void Iniciar() {
-        try {
-            UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
-            SwingUtilities.updateComponentTreeUI(vista);
-            vista.setVisible(true);
-        } catch (UnsupportedLookAndFeelException ex) {
-        } catch (ClassNotFoundException ex) {
-        } catch (InstantiationException ex) {
-        } catch (IllegalAccessException ex) {
-        }
+//        try {
+//            UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
+//            SwingUtilities.updateComponentTreeUI(vista);
+//            vista.setVisible(true);
+//        } catch (UnsupportedLookAndFeelException ex) {
+//        } catch (ClassNotFoundException ex) {
+//        } catch (InstantiationException ex) {
+//        } catch (IllegalAccessException ex) {
+//        }
         //Añadimos la accion de los botones coorespondientes al panel TPV
-        this.vista.btnSalirTPV.setActionCommand("Salir");
-        this.vista.btnSalirTPV.addActionListener(this);
-        this.vista.btnFacturarTPV.setActionCommand("Facturar");
-        this.vista.btnFacturarTPV.addActionListener(this);
-        this.vista.btnAniadirCliente.setActionCommand("AnyadirCli");
-        this.vista.btnAniadirCliente.addActionListener(this);
-        this.vista.btnLimpiar.setActionCommand("Limpiar");
-        this.vista.btnLimpiar.addActionListener(this);
+       
+        super.vista.btnFacturarTPV.setActionCommand("Facturar");
+        super.vista.btnFacturarTPV.addActionListener(this);
+        super.vista.btnAniadirCliente.setActionCommand("AnyadirCli");
+        super.vista.btnAniadirCliente.addActionListener(this);
+        super.vista.btnLimpiar.setActionCommand("Limpiar");
+        super.vista.btnLimpiar.addActionListener(this);
         //Añadimos la acccion de los botones correspondientes al panel Facturas
-        this.vista.btnDevolucion.setActionCommand("VerFac");
-        this.vista.btnDevolucion.addActionListener(this);
+        super.vista.btnDevolucion.setActionCommand("VerFac");
+        super.vista.btnDevolucion.addActionListener(this);
         //Añadimos la accion de los botones correspondientes al dialogo Facturar
-        this.vista.btnFactura.setActionCommand("FacFacturar");
-        this.vista.btnFactura.addActionListener(this);
-        this.vista.btnCancelarFactura.setActionCommand("FacCerrar");
-        this.vista.btnCancelarFactura.addActionListener(this);
+        super.vista.btnFactura.setActionCommand("FacFacturar");
+        super.vista.btnFactura.addActionListener(this);
+        super.vista.btnCancelarFactura.setActionCommand("FacCerrar");
+        super.vista.btnCancelarFactura.addActionListener(this);
     }
 
     @Override
@@ -81,28 +77,28 @@ public class Controlador_TPV extends Controlador implements ActionListener, Mous
                 System.exit(1);
                 break;
             case Facturar:
-                this.vista.DiaFactura.setSize(415, 330);
-                int xF = (int) (Toolkit.getDefaultToolkit().getScreenSize().getWidth() / 2 - this.vista.DiaFactura.getWidth() / 2);
-                int yF = (int) (Toolkit.getDefaultToolkit().getScreenSize().getHeight() / 2 - this.vista.DiaFactura.getHeight() / 2);
-                this.vista.DiaFactura.setLocation(xF, yF);
-                this.vista.DiaFactura.setVisible(true);
+                super.vista.DiaFactura.setSize(415, 330);
+                int xF = (int) (Toolkit.getDefaultToolkit().getScreenSize().getWidth() / 2 - super.vista.DiaFactura.getWidth() / 2);
+                int yF = (int) (Toolkit.getDefaultToolkit().getScreenSize().getHeight() / 2 - super.vista.DiaFactura.getHeight() / 2);
+                super.vista.DiaFactura.setLocation(xF, yF);
+                super.vista.DiaFactura.setVisible(true);
                 break;
             case Limpiar:
-                this.vista.tablaFacturacion.setModel(new DefaultTableModel());
+                super.vista.tablaFacturacion.setModel(new DefaultTableModel());
                 break;
             //Cierre del control del panel TPV
                 //Comienzo del control del panel Facturas
             case VerFac:
-                this.vista.DiaDevolucion.setSize(500, 500);
-                int xdev = (int) (Toolkit.getDefaultToolkit().getScreenSize().getWidth() / 2 - this.vista.DiaDevolucion.getWidth() / 2);
-                int ydev = (int) (Toolkit.getDefaultToolkit().getScreenSize().getHeight() / 2 - this.vista.DiaDevolucion.getHeight() / 2);
-                this.vista.DiaDevolucion.setLocation(xdev, ydev);
-                this.vista.DiaDevolucion.setVisible(true);
+                super.vista.DiaDevolucion.setSize(500, 500);
+                int xdev = (int) (Toolkit.getDefaultToolkit().getScreenSize().getWidth() / 2 - super.vista.DiaDevolucion.getWidth() / 2);
+                int ydev = (int) (Toolkit.getDefaultToolkit().getScreenSize().getHeight() / 2 - super.vista.DiaDevolucion.getHeight() / 2);
+                super.vista.DiaDevolucion.setLocation(xdev, ydev);
+                super.vista.DiaDevolucion.setVisible(true);
 
             //Cierre dle control del panel Facturas
                 //Comienzo del control del dialogo de Facturacion
             case FacCerrar:
-                this.vista.DiaFactura.dispose();
+                super.vista.DiaFactura.dispose();
                 break;
             //Cierre del control del dialogo de Facturacion
         }

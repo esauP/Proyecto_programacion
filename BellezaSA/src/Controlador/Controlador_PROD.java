@@ -5,57 +5,64 @@
  */
 package Controlador;
 
+import Modelo.Modelo_PROD;
 import Vista.Interfaz;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseListener;
 import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
 /**
  *
- * @author Usuario
+ * @author ESAÚ || MACARENA || SAMUEL
  */
-public class Controlador_PROD extends Controlador{
+public class Controlador_PROD extends Controlador implements ActionListener, MouseListener {
+
+    Modelo_PROD mo_prod = new Modelo_PROD();
 
     public Controlador_PROD(Interfaz vista) {
         super(vista);
     }
-     public enum AccionMVC {
- //Panel Productos
+
+    public enum AccionMVC {
+
+        //Panel Productos
         AnyadirProd,
         ModificarProd,
         ElminarProd,
         VerProd,
-         //Diaolgo Productos
+        //Diaolgo Productos
         ProdGuardar,
         ProdCerrar,
     }
 
     public void Iniciar() {
-        try {
-            UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
-            SwingUtilities.updateComponentTreeUI(vista);
-            vista.setVisible(true);
-        } catch (UnsupportedLookAndFeelException ex) {
-        } catch (ClassNotFoundException ex) {
-        } catch (InstantiationException ex) {
-        } catch (IllegalAccessException ex) {
-        }
-         //Añadimos la accion de los botones correspondientes al panel Productos
-        this.vista.btnAniadeProductos.setActionCommand("AnyadirProd");
-        this.vista.btnAniadeProductos.addActionListener(this);
-        this.vista.btnModificarProductos.setActionCommand("ModificarProd");
-        this.vista.btnModificarProductos.addActionListener(this);
-        this.vista.btnEliminarProductos.setActionCommand("EliminarProd");
-        this.vista.btnEliminarProductos.addActionListener(this);
-        this.vista.btnVerProductos.setActionCommand("VerProd");
-        this.vista.btnVerProductos.addActionListener(this);
-         //Añadimos la accion de los botones correspondientes al dialogo AñadirProductos
-        this.vista.btnGuardarProducto.setActionCommand("ProdGuardar");
-        this.vista.btnGuardarProducto.addActionListener(this);
-        this.vista.btnSalirProducto.setActionCommand("ProdCerrar");
-        this.vista.btnSalirProducto.addActionListener(this);
+//        try {
+//            UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
+//            SwingUtilities.updateComponentTreeUI(vista);
+//            vista.setVisible(true);
+//        } catch (UnsupportedLookAndFeelException ex) {
+//        } catch (ClassNotFoundException ex) {
+//        } catch (InstantiationException ex) {
+//        } catch (IllegalAccessException ex) {
+//        }
+        //Añadimos la accion de los botones correspondientes al panel Productos
+        super.vista.btnAniadeProductos.setActionCommand("AnyadirProd");
+        super.vista.btnAniadeProductos.addActionListener(this);
+        super.vista.btnModificarProductos.setActionCommand("ModificarProd");
+        super.vista.btnModificarProductos.addActionListener(this);
+        super.vista.btnEliminarProductos.setActionCommand("EliminarProd");
+        super.vista.btnEliminarProductos.addActionListener(this);
+        super.vista.btnVerProductos.setActionCommand("VerProd");
+        super.vista.btnVerProductos.addActionListener(this);
+        //Añadimos la accion de los botones correspondientes al dialogo AñadirProductos
+        super.vista.btnGuardarProducto.setActionCommand("ProdGuardar");
+        super.vista.btnGuardarProducto.addActionListener(this);
+        super.vista.btnSalirProducto.setActionCommand("ProdCerrar");
+        super.vista.btnSalirProducto.addActionListener(this);
     }
 
     @Override
@@ -66,11 +73,11 @@ public class Controlador_PROD extends Controlador{
              */
 //Comienzo del control del panel Productos
             case AnyadirProd:
-                this.vista.DiaAñadirPro.setSize(770, 650);
-                int xpr = (int) (Toolkit.getDefaultToolkit().getScreenSize().getWidth() / 2 - this.vista.DiaAñadirPro.getWidth() / 2);
-                int ypr = (int) (Toolkit.getDefaultToolkit().getScreenSize().getHeight() / 2 - this.vista.DiaAñadirPro.getHeight() / 2);
-                this.vista.DiaAñadirPro.setLocation(xpr, ypr);
-                this.vista.DiaAñadirPro.setVisible(true);
+                super.vista.DiaAñadirPro.setSize(770, 650);
+                int xpr = (int) (Toolkit.getDefaultToolkit().getScreenSize().getWidth() / 2 - super.vista.DiaAñadirPro.getWidth() / 2);
+                int ypr = (int) (Toolkit.getDefaultToolkit().getScreenSize().getHeight() / 2 - super.vista.DiaAñadirPro.getHeight() / 2);
+                super.vista.DiaAñadirPro.setLocation(xpr, ypr);
+                super.vista.DiaAñadirPro.setVisible(true);
                 break;
             case ModificarProd:
                 this.mo_prod.Modificar();
@@ -82,12 +89,12 @@ public class Controlador_PROD extends Controlador{
                 this.mo_prod.Buscar();
                 break;
             //Cierre del control del panel Productos
-                //Comienzo del control del dialogo Añadir Productos
+            //Comienzo del control del dialogo Añadir Productos
             case ProdGuardar:
                 this.mo_prod.Insertar();
                 break;
             case ProdCerrar:
-                this.vista.DiaAñadirPro.dispose();
+                super.vista.DiaAñadirPro.dispose();
                 break;
             //Cierre del contrl del dialogo Añadir Productos
         }

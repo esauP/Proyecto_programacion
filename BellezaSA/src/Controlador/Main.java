@@ -6,12 +6,15 @@
 package Controlador;
 
 import Vista.Interfaz;
+
 /**
  *
  * @author ESAÚ || MACARENA || SAMUEL
  */
 public class Main {
-    public static void main (String [] args) {
-      new Controlador( new Interfaz() ).Iniciar() ;
+
+    public static void main(String[] args) {
+        new Controlador(new Interfaz()).Iniciar();
+
     }
 }
