@@ -28,7 +28,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author Usuario
+ * @author ESAÚ || MACARENA || SAMUEL
  */
 public class Controlador implements ActionListener, MouseListener {
 

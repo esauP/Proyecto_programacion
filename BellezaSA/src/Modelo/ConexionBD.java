@@ -16,7 +16,7 @@ import java.util.StringTokenizer;
 
 /**
  *
- * @author Usuario
+ * @author ESAÚ || MACARENA || SAMUEL
  */
 public class ConexionBD {
 

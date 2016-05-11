@@ -7,7 +7,7 @@ package Modelo;
 
 /**
  *
- * @author Usuario
+ * @author ESAÚ || MACARENA || SAMUEL
  */
 public class Modelo_TPV extends ConexionBD{
     

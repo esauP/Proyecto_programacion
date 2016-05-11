@@ -6,12 +6,9 @@
 package Controlador;
 
 import Vista.Interfaz;
-import java.io.IOException;
-import java.sql.SQLException;
-
 /**
  *
- * @author Usuario
+ * @author ESAÚ || MACARENA || SAMUEL
  */
 public class Main {
     public static void main (String [] args) {

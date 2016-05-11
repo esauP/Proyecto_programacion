@@ -7,7 +7,7 @@ package Modelo;
 
 /**
  *
- * @author Usuario
+ * @author ESAÚ || MACARENA || SAMUEL
  */
 public class Modelo_CLI extends ConexionBD {
 
