@@ -24,6 +24,7 @@ import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -103,6 +104,7 @@ public class Controlador implements ActionListener, MouseListener {
         //Panel Tpv
         Salir,
         Facturar,
+        Limpiar,
         //Panel Clientes
         AnyadirCli,
         ModificarCli,
@@ -227,6 +229,10 @@ public class Controlador implements ActionListener, MouseListener {
         this.vista.btnSalirTPV.addActionListener(this);
         this.vista.btnFacturarTPV.setActionCommand("Facturar");
         this.vista.btnFacturarTPV.addActionListener(this);
+        this.vista.btnAniadirCliente.setActionCommand("AnyadirCli");
+        this.vista.btnAniadirCliente.addActionListener(this);
+        this.vista.btnLimpiar.setActionCommand("Limpiar");
+        this.vista.btnLimpiar.addActionListener(this);
         //Añadimos la accion de los botones correspondientes al panel Clientes
         this.vista.btnAniadeClientes.setActionCommand("AnyadirCli");
         this.vista.btnAniadeClientes.addActionListener(this);
@@ -458,7 +464,9 @@ public class Controlador implements ActionListener, MouseListener {
                 int yF = (int) (Toolkit.getDefaultToolkit().getScreenSize().getHeight() / 2 - this.vista.DiaFactura.getHeight() / 2);
                 this.vista.DiaFactura.setLocation(xF, yF);
                 this.vista.DiaFactura.setVisible(true);
-
+                break;
+            case Limpiar:
+                this.vista.tablaFacturacion.setModel(new DefaultTableModel());
                 break;
             //Cierre del control del panel TPV
             //Comienzo del control del panel del panel Clientes
