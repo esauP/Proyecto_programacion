@@ -51,8 +51,7 @@ public class Controlador implements ActionListener, MouseListener {
         //Colocamos la ventana en el centro de la pantalla
         this.vista.setLocationRelativeTo(null);
 
-        this.vista.btnSalirTPV.setActionCommand("Salir");
-        this.vista.btnSalirTPV.addActionListener(this);
+        
 
         ctpv.Iniciar();
 
@@ -66,7 +65,7 @@ public class Controlador implements ActionListener, MouseListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        ctpv.actionPerformed(e);
+     
     }
 
     @Override

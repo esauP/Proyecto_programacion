@@ -49,7 +49,8 @@ public class Controlador_TPV extends Controlador implements ActionListener, Mous
 //        } catch (IllegalAccessException ex) {
 //        }
         //Añadimos la accion de los botones coorespondientes al panel TPV
-       
+        super.vista.btnSalirTPV.setActionCommand("Salir");
+        super.vista.btnSalirTPV.addActionListener(this);       
         super.vista.btnFacturarTPV.setActionCommand("Facturar");
         super.vista.btnFacturarTPV.addActionListener(this);
         super.vista.btnAniadirCliente.setActionCommand("AnyadirCli");
