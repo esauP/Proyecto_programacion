@@ -246,6 +246,9 @@ public class Interfaz extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         listProductos = new javax.swing.JList();
         comboClientes = new javax.swing.JComboBox();
+        btnAniadirCliente = new javax.swing.JButton();
+        btnLimpiar = new javax.swing.JButton();
+        btnCajaDelDia = new javax.swing.JButton();
         paneClientes = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
         tableClientes = new javax.swing.JTable();
@@ -1913,11 +1916,10 @@ public class Interfaz extends javax.swing.JFrame {
 
         btnFacturarTPV.setText("Facturar");
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 7;
+        gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 5;
         gridBagConstraints.ipadx = 3;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
-        gridBagConstraints.insets = new java.awt.Insets(18, 0, 32, 63);
+        gridBagConstraints.insets = new java.awt.Insets(21, 0, 32, 100);
         paneTpv.add(btnFacturarTPV, gridBagConstraints);
 
         jLabel6.setText("Factura Nº");
@@ -1954,7 +1956,7 @@ public class Interfaz extends javax.swing.JFrame {
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.weightx = 1.0;
         gridBagConstraints.weighty = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(36, 32, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(10, 32, 0, 0);
         paneTpv.add(jScrollPane2, gridBagConstraints);
 
         comboClientes.setEditable(true);
@@ -1966,6 +1968,28 @@ public class Interfaz extends javax.swing.JFrame {
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(62, 32, 0, 0);
         paneTpv.add(comboClientes, gridBagConstraints);
+
+        btnAniadirCliente.setText("Añadir Cliente");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        gridBagConstraints.insets = new java.awt.Insets(10, 32, 0, 0);
+        paneTpv.add(btnAniadirCliente, gridBagConstraints);
+
+        btnLimpiar.setText("Limpiar");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_END;
+        gridBagConstraints.insets = new java.awt.Insets(10, 0, 0, 0);
+        paneTpv.add(btnLimpiar, gridBagConstraints);
+
+        btnCajaDelDia.setText("Caja del Día");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 7;
+        gridBagConstraints.gridy = 5;
+        paneTpv.add(btnCajaDelDia, gridBagConstraints);
 
         tabPrincipal.addTab("TPV", paneTpv);
 
@@ -2420,6 +2444,8 @@ public class Interfaz extends javax.swing.JFrame {
     public javax.swing.JButton btnAniadeEmpleado;
     public javax.swing.JButton btnAniadeProductos;
     public javax.swing.JButton btnAniadeProveedores;
+    public javax.swing.JButton btnAniadirCliente;
+    public javax.swing.JButton btnCajaDelDia;
     public javax.swing.JButton btnCancelarCliente;
     public javax.swing.JButton btnCancelarEmpleado;
     public javax.swing.JButton btnCancelarFactura;
@@ -2439,6 +2465,7 @@ public class Interfaz extends javax.swing.JFrame {
     public javax.swing.JButton btnGuardarProducto;
     public javax.swing.JButton btnGuardarProveedor;
     public javax.swing.JButton btnIncrementar;
+    public javax.swing.JButton btnLimpiar;
     public javax.swing.JButton btnModificaClientes;
     public javax.swing.JButton btnModificaProveedores;
     public javax.swing.JButton btnModificarEmpleado;
