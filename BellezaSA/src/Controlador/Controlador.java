@@ -456,6 +456,11 @@ public class Controlador implements ActionListener, MouseListener {
             case DiaEmpConsulta:
                 break;
             //Cierre del control del dialogo Listado de facturacion por empleado
+            //Comienzo del control del dialogo de Facturacion
+            case FacCerrar:
+                this.vista.DiaFactura.dispose();
+                break;
+            //Cierre del control del dialogo de Facturacion
             /**
              * En esta seccion controlamos los botones de los paneles
              */
@@ -548,16 +553,15 @@ public class Controlador implements ActionListener, MouseListener {
                 this.mo_prov.Buscar();
                 break;
             //Cierre del control del panel Proveedores
-                //Comienzo del control del panel Facturas
+            //Comienzo del control del panel Facturas
             case VerFac:
                 this.vista.DiaDevolucion.setSize(500, 500);
                 int xdev = (int) (Toolkit.getDefaultToolkit().getScreenSize().getWidth() / 2 - this.vista.DiaDevolucion.getWidth() / 2);
                 int ydev = (int) (Toolkit.getDefaultToolkit().getScreenSize().getHeight() / 2 - this.vista.DiaDevolucion.getHeight() / 2);
                 this.vista.DiaDevolucion.setLocation(xdev, ydev);
                 this.vista.DiaDevolucion.setVisible(true);
-                
-                //Cierre dle control del panel Facturas
 
+            //Cierre dle control del panel Facturas
         }
     }
 
