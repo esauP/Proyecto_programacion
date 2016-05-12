@@ -14,7 +14,12 @@ import Vista.Interfaz;
 public class Main {
 
     public static void main(String[] args) {
-        new Controlador(new Interfaz()).Iniciar();
+        Interfaz vista=new Interfaz();
+        new Controlador_TPV(vista).Iniciar();
+        new Controlador_CLI(vista).Iniciar();
+        new Controlador_EMP(vista).Iniciar();
+        new Controlador_MENU(vista).Iniciar();
+        new Controlador(vista).Iniciar();
 
     }
 }

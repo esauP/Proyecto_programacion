@@ -21,7 +21,7 @@ import javax.swing.UnsupportedLookAndFeelException;
 public class Controlador implements ActionListener, MouseListener {
 
     Interfaz vista;
-    Controlador_TPV ctpv;
+   
     Controlador_CLI ccli;
     Controlador_EMP cemp;
     Controlador_MENU cmen;
@@ -50,16 +50,8 @@ public class Controlador implements ActionListener, MouseListener {
         }
         //Colocamos la ventana en el centro de la pantalla
         this.vista.setLocationRelativeTo(null);
-
+//        Controlador_TPV ctpv=new Controlador_TPV(this.vista);
         
-
-        ctpv.Iniciar();
-
-        ccli.Iniciar();
-        cemp.Iniciar();
-        cprod.Iniciar();
-        cprov.Iniciar();
-        cmen.Iniciar();
 
     }
 
