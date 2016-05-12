@@ -63,6 +63,8 @@ public class Controlador_MENU extends Controlador implements ActionListener, Mou
         DiaEmpConsulta,
         //Dialogo Listado Cliente
         DiaCliConsulta,
+        //Salida del programa
+        Salir
 
     }
 
@@ -279,10 +281,10 @@ public class Controlador_MENU extends Controlador implements ActionListener, Mou
             case DiaEmpConsulta:
                 break;
             //Cierre del control del dialogo Listado de facturacion por empleado
-
-            /**
-             * En esta seccion controlamos los botones de los paneles
-             */
+            //Control del menu salir
+             case Salir:
+                System.exit(1);
+                break;
         }
     }
 }

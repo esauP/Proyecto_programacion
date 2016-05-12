@@ -19,6 +19,8 @@ public class Main {
         new Controlador_CLI(vista).Iniciar();
         new Controlador_EMP(vista).Iniciar();
         new Controlador_MENU(vista).Iniciar();
+        new Controlador_PROD(vista).Iniciar();
+        new Controlador_PROV(vista).Iniciar();
         new Controlador(vista).Iniciar();
 
     }
