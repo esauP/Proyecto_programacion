@@ -15,7 +15,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author  ESAÚ || MACARENA || SAMUEL
+ * @author ESAÚ || MACARENA || SAMUEL
  */
 public class Controlador_TPV extends Controlador implements ActionListener, MouseListener {
 
@@ -32,7 +32,7 @@ public class Controlador_TPV extends Controlador implements ActionListener, Mous
         Salir,
         Facturar,
         Limpiar,
-         //Dialogo Facturar
+        //Dialogo Facturar
         FacFacturar,
         FacCerrar,
         //Panel Facturas
@@ -43,15 +43,13 @@ public class Controlador_TPV extends Controlador implements ActionListener, Mous
 
         //Añadimos la accion de los botones coorespondientes al panel TPV
         super.vista.btnSalirTPV.setActionCommand("Salir");
-        super.vista.btnSalirTPV.addActionListener(this);       
+        super.vista.btnSalirTPV.addActionListener(this);
         super.vista.btnFacturarTPV.setActionCommand("Facturar");
         super.vista.btnFacturarTPV.addActionListener(this);
         super.vista.btnAniadirCliente.setActionCommand("AnyadirCli");
         super.vista.btnAniadirCliente.addActionListener(this);
         super.vista.btnLimpiar.setActionCommand("Limpiar");
         super.vista.btnLimpiar.addActionListener(this);
-        super.vista.btnAniadeClientes.setActionCommand("AnyadirCli");
-        super.vista.btnAniadeClientes.addActionListener(this);
         //Añadimos la acccion de los botones correspondientes al panel Facturas
         super.vista.btnDevolucion.setActionCommand("VerFac");
         super.vista.btnDevolucion.addActionListener(this);
@@ -72,6 +70,13 @@ public class Controlador_TPV extends Controlador implements ActionListener, Mous
             case Salir:
                 System.exit(1);
                 break;
+            case AnyadirCli:
+                super.vista.DiaAñadirCLi.setSize(900, 570);
+                int xc = (int) (Toolkit.getDefaultToolkit().getScreenSize().getWidth() / 2 - super.vista.DiaAñadirCLi.getWidth() / 2);
+                int yc = (int) (Toolkit.getDefaultToolkit().getScreenSize().getHeight() / 2 - super.vista.DiaAñadirCLi.getHeight() / 2);
+                super.vista.DiaAñadirCLi.setLocation(xc, yc);
+                super.vista.DiaAñadirCLi.setVisible(true);
+                break;
             case Facturar:
                 super.vista.DiaFactura.setSize(415, 330);
                 int xF = (int) (Toolkit.getDefaultToolkit().getScreenSize().getWidth() / 2 - super.vista.DiaFactura.getWidth() / 2);
@@ -83,7 +88,7 @@ public class Controlador_TPV extends Controlador implements ActionListener, Mous
                 super.vista.tablaFacturacion.setModel(new DefaultTableModel());
                 break;
             //Cierre del control del panel TPV
-                //Comienzo del control del panel Facturas
+            //Comienzo del control del panel Facturas
             case VerFac:
                 super.vista.DiaDevolucion.setSize(500, 500);
                 int xdev = (int) (Toolkit.getDefaultToolkit().getScreenSize().getWidth() / 2 - super.vista.DiaDevolucion.getWidth() / 2);
@@ -92,7 +97,7 @@ public class Controlador_TPV extends Controlador implements ActionListener, Mous
                 super.vista.DiaDevolucion.setVisible(true);
 
             //Cierre dle control del panel Facturas
-                //Comienzo del control del dialogo de Facturacion
+            //Comienzo del control del dialogo de Facturacion
             case FacCerrar:
                 super.vista.DiaFactura.dispose();
                 break;
