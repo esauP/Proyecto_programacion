@@ -282,7 +282,7 @@ public class Controlador_MENU extends Controlador implements ActionListener, Mou
                 break;
             //Cierre del control del dialogo Listado de facturacion por empleado
             //Control del menu salir
-             case Salir:
+            case Salir:
                 System.exit(1);
                 break;
         }

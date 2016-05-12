@@ -28,6 +28,7 @@ public class Controlador_TPV extends Controlador implements ActionListener, Mous
     public enum AccionMVC {
 
         //Panel Tpv
+        AnyadirCli,
         Salir,
         Facturar,
         Limpiar,
@@ -39,15 +40,7 @@ public class Controlador_TPV extends Controlador implements ActionListener, Mous
     }
 
     public void Iniciar() {
-//        try {
-//            UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
-//            SwingUtilities.updateComponentTreeUI(vista);
-//            vista.setVisible(true);
-//        } catch (UnsupportedLookAndFeelException ex) {
-//        } catch (ClassNotFoundException ex) {
-//        } catch (InstantiationException ex) {
-//        } catch (IllegalAccessException ex) {
-//        }
+
         //Añadimos la accion de los botones coorespondientes al panel TPV
         super.vista.btnSalirTPV.setActionCommand("Salir");
         super.vista.btnSalirTPV.addActionListener(this);       
@@ -57,6 +50,8 @@ public class Controlador_TPV extends Controlador implements ActionListener, Mous
         super.vista.btnAniadirCliente.addActionListener(this);
         super.vista.btnLimpiar.setActionCommand("Limpiar");
         super.vista.btnLimpiar.addActionListener(this);
+        super.vista.btnAniadeClientes.setActionCommand("AnyadirCli");
+        super.vista.btnAniadeClientes.addActionListener(this);
         //Añadimos la acccion de los botones correspondientes al panel Facturas
         super.vista.btnDevolucion.setActionCommand("VerFac");
         super.vista.btnDevolucion.addActionListener(this);
